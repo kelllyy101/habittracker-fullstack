@@ -6,7 +6,7 @@
     <title>Habits</title>
 </head>
 <body>
-<h1>Habits
+<h1>Add a New Habit
 </h1>
 <table>
     {% for item in items %}
