@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Item
 from django.shortcuts import render, redirect
+from .forms import ItemForm
 
 # Create your views here.
 
@@ -14,10 +15,14 @@ def get_habits(request):
 
 def add_habit(request):
     if request.method == 'POST':
-        name = request.POST.get('item_name')
-        done = 'done' in request.POST
-        Item.objects.create(name=name, done=done)
+        form  = ItemForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('get_habits')
+    form = ItemForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'habits/add_habit.html', context)
 
-        return redirect('get_habits')
 
-    return render(request, 'habits/add_habit.html')

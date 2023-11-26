@@ -37,3 +37,67 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 ---
 
 Happy coding!
+
+
+1. Create User Account  
+    As a new user, I want to create a personalized account by providing my email and a secure password, so I can start tracking my habits.
+
+2. User Login  
+    As a registered user, I want to log in with my email and password to access my habit tracking dashboard.
+
+3. Remember Frequent Users  
+    As a frequent user, I want the application to remember my login credentials, so I can quickly access my habit tracker without entering my details each time.
+
+4. Reset Forgotten Password  
+    As a user who forgets my password, I want the option to reset it by receiving a password reset link via email, ensuring I can regain access to my account.
+
+5. Social Media Login  
+    As a user, I want the ability to sign in using my Google or Facebook account, simplifying the login process and enhancing security.
+
+6. View Personalized Dashboard  
+    As a user, I want to see a personalized dashboard upon logging in, displaying my habit categories, tracking streaks, and progress.
+
+7. Set and Update Goals  
+    As a user, I want to set, edit, and update my habit goals within my account settings, helping me focus on specific targets.
+
+8. Track Habit History  
+    As a user, I want to view a history of my habit completion, enabling me to review past performance and identify patterns.
+
+9. Edit User Profile  
+    As a user, I want to edit my profile details, including my name, profile picture, and email, ensuring accurate representation.
+
+10. Logout Functionality  
+     As a user, I want a secure way to log out of the application, ensuring my account remains private when using shared devices.
+
+11. Sync Data Across Devices  
+     As a user, I want my habit tracking data to sync seamlessly across different devices, ensuring consistency and accessibility.
+
+12. Receive Email Notifications  
+     As a user, I want to receive email notifications for important updates, such as habit reminders, achievements, and account changes.
+
+13. Log Daily Habits  
+    As a user, I want to log my daily habits, prompted by the app, so I can keep track of my progress and maintain consistency.
+
+14. View Habit Streaks  
+    As a user, I want to see my habit streaks and visualize my consistent performance over time, motivating me to maintain positive habits.
+
+15. Customize Habit Reminders  
+    As a user, I want to customize the time and frequency of habit reminders, ensuring that I receive prompts at times that suit my routine.
+
+16. Edit Habit Details  
+    As a user, I want the ability to edit habit details, such as the habit's name, category, and reminder settings, to reflect changes in my routine.
+
+17. Set Long-Term Goals  
+    As a user, I want to set long-term goals related to my habits, so I can work towards achieving larger milestones over time.
+
+18. View Habit Analytics  
+    As a user, I want to view analytics that display trends in my habits' performance, helping me identify areas for improvement and growth.
+
+19. Share Habit Achievements  
+    As a user, I want to share my habit achievements on social media or with friends, celebrating my progress and encouraging others.
+
+20. User-Specific Habit Tracking  
+    As a user, I want to ensure that my habit tracking is personalized, only allowing me to view and manage my own habits.
+
+21. Responsive Design for Mobile  
+    As a user, I want the habit tracker application to be responsive on mobile devices, ensuring that I can conveniently track habits on the go.
