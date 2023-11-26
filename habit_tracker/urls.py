@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from habit.views import get_habits, add_habit
+from habit.views import get_habits, add_habit, edit_habit
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', get_habits, name = 'get_habits'),
-    path('add', add_habit, name = 'add')
+    path('add', add_habit, name = 'add'),
+    path('edit/<item_id>', edit_habit, name='edit')
 ]

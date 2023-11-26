@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Item
 from django.shortcuts import render, redirect
 from .forms import ItemForm
@@ -25,4 +25,17 @@ def add_habit(request):
     }
     return render(request, 'habits/add_habit.html', context)
 
+
+def edit_habit(request, item_id):
+    item = get_object_or_404(Item, id=item_id)
+    if request.method == 'POST':
+        form  = ItemForm(request.POST, instance=item)
+        if form.is_valid():
+            form.save()
+            return redirect('get_habits')
+    form = ItemForm(instance=item)
+    context = {
+'form': form
+    }
+    return render(request, 'habits/edit_habit.html', context)
 
