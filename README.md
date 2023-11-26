@@ -38,7 +38,49 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 
 Happy coding!
 
+## Table of Contents
+- [Table of Contents](#table-of-contents)
+- [User Experience Design (UX)](#user-experience-design-ux)
+    + [Typography](#typography)
+    + [Wireframes](#wireframes)
+- [The Strategy Plane](#the-strategy-plane)
+  - [Site Goals](#site-goals)
+  - [User Stories](#user-stories)
+- [The Scope Plane](#the-scope-plane)
+- [The Structure Plane](#the-structure-plane)
+  - [Main Structure](#main-menu)
+- [The Skeleton Plane](#the-skeleton-plane)
+  - [Design Flow](#Design Flow)
+- [The Surface Plane](#the-surface-plane)
+  - [Design](#design)
+  - [Colour Scheme](#colour-scheme)
+  - [Typography](#typography)
+- [Features](#features)
+  - [Existing Features](#existing-features)
+  - [Future Features](#future-features)
+- [Technologies](#technologies)
+-* [Testing](#testing)
+    + [Browser Compatibility](#browser-compatibility)
+    + [Responsiveness](#responsiveness)
+    + [Performance Testing](#performance-testing)
+    + [Accessibility Testing](#accessibility-testing)
+    + [User Story Testing](#user-story-testing)
+    + [Challenges Faced](#challenges-faced)
+    + [Code Validation](#code-validation)
+      - [HTML Validation](#html-validation)
+      - [CSS Validation](#css-validation)
+      - [Python Validation](#python-validation)
+      - [JavaScript](#javascript)
+  - [Deployment](#deployment)
+    + [Local Deployment](#local-deployment)
+    + [Heroku Deployment](#heroku-deployment)
+  - [Project Creation](#project-creation)
+  - [Software](#software)
+  - [Media and Credits](#media-and-credits)
+- [Thanks to](#thanks-to)
 
+
+#user-stories
 1. Create User Account  
     As a new user, I want to create a personalized account by providing my email and a secure password, so I can start tracking my habits.
 

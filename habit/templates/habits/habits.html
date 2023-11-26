@@ -16,6 +16,12 @@
             {% else %}
                 <td>{{ item.name }}</td>
             {% endif %}
+            <td>
+                <a href="/edit/{{ item.id }}">
+                    Edit
+                </a>
+            </td>
+
         </tr>
         {% empty %}
         <tr><td>Create New Habits</td></tr>
