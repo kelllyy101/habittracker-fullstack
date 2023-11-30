@@ -15,13 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from habit.views import get_habits, add_habit
-from habit.views import get_habits, add_habit, edit_habit
+from habit import views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', get_habits, name = 'get_habits'),
-    path('add', add_habit, name = 'add'),
-    path('edit/<item_id>', edit_habit, name='edit')
+    path('', views.get_habits, name = 'get_habits'),
+    path('add', views.add_habit, name = 'add'),
+    path('edit/<item_id>', views.edit_habit, name='edit'),
+    path('toggle/<item_id>', views.toggle_habit, name='toggle'),
+    path('delete/<item_id>', views.delete_habit, name='delete'),
+
 ]

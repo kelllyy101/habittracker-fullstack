@@ -8,7 +8,7 @@
 <body>
 <h1>Add a New Habit
 </h1>
-<form method="POST" action="{% url 'add' %}">
+<form method="POST" action="add">
     {% csrf_token %}
     {{ form.as_p }}
     </div>

@@ -8,19 +8,15 @@
 <body>
 <h1>Add a New Habit
 </h1>
-<table>
-    {% for item in items %}
-        <tr>
-            {% if item.done %}
-                <td><strike>{{ item.name }}</strike></td>
-            {% else %}
-                <td>{{ item.name }}</td>
-            {% endif %}
-        </tr>
-        {% empty %}
-        <tr><td>Create New Habits</td></tr>
-    {% endfor %}
-</table>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div>
+        <p>
+            <button type="submit">Add a Habit</button>
+        </p>
+    </div>
+</form>
 
 
 </body>
