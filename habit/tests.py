@@ -1,9 +1,12 @@
 from django.test import TestCase
+from .models import Item
 
 # Create your tests here.
-class TestDjango(TestCase):
 
-    def test_habit_name_is_required(self):
-        self.assertEqual(1, 1)
+class TestViews(TestCase):
 
+    def test_habit_list(self):
+        response = self.client.get('/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'habit/habits.html')
 
