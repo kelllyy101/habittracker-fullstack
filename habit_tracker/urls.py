@@ -25,5 +25,8 @@ urlpatterns = [
     path('edit/<item_id>', views.edit_habit, name='edit'),
     path('toggle/<item_id>', views.toggle_habit, name='toggle'),
     path('delete/<item_id>', views.delete_habit, name='delete'),
+    path('members/', include('django.contrib.auth.urls')),
+    path('members/', include('members.urls')),
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 ]
