@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from habit import views
 
 
@@ -25,7 +25,7 @@ urlpatterns = [
     path('edit/<item_id>', views.edit_habit, name='edit'),
     path('toggle/<item_id>', views.toggle_habit, name='toggle'),
     path('delete/<item_id>', views.delete_habit, name='delete'),
-    path('members/', include('django.contrib.auth.urls')),
-    path('members/', include('users.urls')),
+    # path('members/', include('django.contrib.auth.urls')),
+    # path('members/', include('users.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
