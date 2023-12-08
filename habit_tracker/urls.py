@@ -27,5 +27,5 @@ urlpatterns = [
     path('delete/<item_id>', views.delete_habit, name='delete'),
     # path('members/', include('django.contrib.auth.urls')),
     # path('members/', include('users.urls')),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
