@@ -20,6 +20,7 @@ from habit import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('events/', include('events.urls')),
     path('', views.get_habits, name = 'get_habits'),
     path('add', views.add_habit, name = 'add'),
     path('edit/<item_id>', views.edit_habit, name='edit'),
