@@ -15,17 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from habit import views
-
+from habit import views as habit_views
+from events import views as events_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', events_views.home, name="home"),
     path('events/', include('events.urls')),
-    path('', views.get_habits, name = 'get_habits'),
-    path('add', views.add_habit, name = 'add'),
-    path('edit/<item_id>', views.edit_habit, name='edit'),
-    path('toggle/<item_id>', views.toggle_habit, name='toggle'),
-    path('delete/<item_id>', views.delete_habit, name='delete'),
+    # path('', habit_views.get_habits, name = 'get_habits'),
+    path('add', habit_views.add_habit, name = 'add'),
+    path('edit/<item_id>', habit_views.edit_habit, name='edit'),
+    path('toggle/<item_id>', habit_views.toggle_habit, name='toggle'),
+    path('delete/<item_id>', habit_views.delete_habit, name='delete'),
     # path('members/', include('django.contrib.auth.urls')),
     # path('members/', include('users.urls')),
 ] # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
