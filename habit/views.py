@@ -2,13 +2,18 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Item
 from django.shortcuts import render, redirect
 from .forms import ItemForm
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
+from django.contrib.auth.forms import UserCreationForm
+#from .forms import RegisterUserForm
 
 # Create your views here.
 def home(request):
     return render(request, 'events/templates/home.html')
 
 
-def get_habits(request):
+def get_habits(request):        
     items = Item.objects.all()
     context = {
         'items': items
@@ -51,4 +56,5 @@ def delete_habit(request, item_id):
     item = get_object_or_404(Item, id=item_id)
     item.delete()
     return redirect('get_habits')
+
 

@@ -6,15 +6,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          
-          <li class="nav-item">
-            <a class="nav-link" href="#">Calendar</a>
-          </li>
   
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Events
-            </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="#">All Habits</a></li>
               {% if user.is_authenticated %}
@@ -22,8 +15,6 @@
               <li><a class="dropdown-item" href="#">My Habits</a></li>
               {% endif %}
               <li><a class="dropdown-item" href="#">Search Habits</a></li>
-  
-              
             </ul>
           </li>
   
@@ -33,9 +24,9 @@
               Habits
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">All Habits</a></li>
+              <li><a class="dropdown-item" href="{% url 'get_habits' %}">All Habits</a></li>
               {% if user.is_authenticated %}
-              <li><a class="dropdown-item" href="#">Add Habits</a></li>
+              <li><a class="dropdown-item" href="{% url 'add' %}">Add Habits</a></li>
               {% endif %}
               
             </ul>
@@ -54,9 +45,8 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Register</a>
           </li>
-  
           <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
+            <a class="nav-link" href="{% url 'login' %}">Login</a>
           </li>
         {% endif %}
   

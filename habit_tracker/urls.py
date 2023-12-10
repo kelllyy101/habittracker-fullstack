@@ -17,17 +17,24 @@ from django.contrib import admin
 from django.urls import path, include
 from habit import views as habit_views
 from events import views as events_views
+from users import views as users_views
+
+from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', events_views.home, name="home"),
     path('events/', include('events.urls')),
-    # path('', habit_views.get_habits, name = 'get_habits'),
+    path('dashboard', habit_views.get_habits, name = 'get_habits'),
     path('add', habit_views.add_habit, name = 'add'),
     path('edit/<item_id>', habit_views.edit_habit, name='edit'),
     path('toggle/<item_id>', habit_views.toggle_habit, name='toggle'),
     path('delete/<item_id>', habit_views.delete_habit, name='delete'),
+    path('login_user', users_views.login_user, name="login"),
+    #path('logout_user', habit_views.logout_user, name='logout'),
+    #path('register_user', habit_views.register_user, name='register_user'),
+]
     # path('members/', include('django.contrib.auth.urls')),
     # path('members/', include('users.urls')),
-] # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+ # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
