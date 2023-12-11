@@ -5,40 +5,31 @@
 <h1>Hello {{ name }}</h1>
 
 
-	<center>
+<center>
 	<h1>Hello {{ name }}! Habits For {{ month }} {{ year }}</h1>
 
 	As of {{ time }}
-	<br/><br/>
+	<br /><br />
 	{{ cal|safe }}
-	<br/><br/>
+	<br /><br />
 </center>
-	
 
 
 
-    </p>
-  </div>
-  {% if user.is_authenticated %}
-    {% if user == event.manager %}
-      <div class="card-footer text-muted">
-        
-        <a href="{% url 'get-habit' %}" class="btn btn-outline-secondary btn-sm">Habits</a>
 
-      </div>
-    {% endif %}  
-  {% endif %}
+</p>
 </div>
-		<br/>
-		{% endfor %}
+{% if user.is_authenticated %}
+
+</div>
+<br />
 
 	{% else %}
-	Sorry...You have no habits...
+Sorry...You have no habits...
 	{% endif %}
-
-	<center>
-	<br/><br/><br/><br/>
+{% endblock %}
+<center>
+	<br /><br /><br /><br />
 	Copyright (c) {{ current_year }}
 
-	</center>
-{% endblock %}
+</center>
