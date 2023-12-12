@@ -59,7 +59,7 @@ ROOT_URLCONF = 'habit_tracker.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['templatesbase'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -30,11 +30,8 @@ urlpatterns = [
     path('edit/<item_id>', habit_views.edit_habit, name='edit'),
     path('toggle/<item_id>', habit_views.toggle_habit, name='toggle'),
     path('delete/<item_id>', habit_views.delete_habit, name='delete'),
-    path('login_user', users_views.login_user, name="login"),
-    #path('logout_user', habit_views.logout_user, name='logout'),
-    #path('register_user', habit_views.register_user, name='register_user'),
+    # path('', include('django.contrib.auth.urls')),
+    path('', include('users.urls')),
 ]
-    # path('members/', include('django.contrib.auth.urls')),
-    # path('members/', include('users.urls')),
  # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
