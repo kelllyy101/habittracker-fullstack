@@ -24,8 +24,9 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', events_views.home, name="home"),
-    path('events/', include('events.urls')),
-    path('', habit_views.get_habits, name = 'get_habits'),
+    # path('events/', include('events.urls')),
+    path('', events_views.landing, name = ''),
+    path('app', habit_views.get_habits, name = 'get_habits'),
     path('add', habit_views.add_habit, name = 'add'),
     path('edit/<item_id>', habit_views.edit_habit, name='edit'),
     path('toggle/<item_id>', habit_views.toggle_habit, name='toggle'),

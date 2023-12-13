@@ -35,7 +35,7 @@ def login_user(request):
 		if user is not None:
 			login(request, user)
 			#redirect to a success page
-			return redirect('home')
+			return redirect('get_habits')
 		else:
 			#Return error message.
 			messages.success(request, ("There Was An Error Logging In, Try Again..."))	

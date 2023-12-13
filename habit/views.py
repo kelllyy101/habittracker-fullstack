@@ -7,12 +7,15 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 #from .forms import RegisterUserForm
+from django.contrib.auth.decorators import login_required
+
 
 # Create your views here.
 def home(request):
     return render(request, 'events/templates/home.html')
 
 
+@login_required
 def get_habits(request):        
     items = Item.objects.all()
     context = {
@@ -20,6 +23,7 @@ def get_habits(request):
     }
     return render(request, 'habits/habits.html', context)
 
+@login_required
 def add_habit(request):
     if request.method == 'POST':
         form  = ItemForm(request.POST)
@@ -32,7 +36,7 @@ def add_habit(request):
     }
     return render(request, 'habits/add_habit.html', context)
 
-
+@login_required
 def edit_habit(request, item_id):
     item = get_object_or_404(Item, id=item_id)
     if request.method == 'POST':
@@ -46,12 +50,14 @@ def edit_habit(request, item_id):
     }
     return render(request, 'habits/edit_habit.html', context)
 
+@login_required
 def toggle_habit(request, item_id):
     item = get_object_or_404(Item, id=item_id)
     item.done = not item.done
     item.save()
     return redirect('get_habits')
 
+@login_required
 def delete_habit(request, item_id):
     item = get_object_or_404(Item, id=item_id)
     item.delete()
