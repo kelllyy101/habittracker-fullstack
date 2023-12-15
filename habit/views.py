@@ -67,3 +67,12 @@ def delete_habit(request, item_id):
 @login_required
 def admin_view(request, item_id):
     return redirect('admin/')
+
+def habits_display(habits):
+    return [
+        {
+            "id": habit.id,
+            "name": habit.description,
+            "frequency": " - ".join([days[int(day)] for day in habit.frequency.split()])
+        } for habit in habits
+    ]
