@@ -18,11 +18,12 @@ from django.urls import path, include
 from habit import views as habit_views
 from events import views as events_views
 from users import views as users_views
+from django.conf.urls.static import static
+from django.conf import settings
 
-from django.urls import path
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls, name="admin"),
     # path('', events_views.home, name="home"),
     # path('events/', include('events.urls')),
     path('', events_views.landing, name = ''),
@@ -34,5 +35,6 @@ urlpatterns = [
     # path('', include('django.contrib.auth.urls')),
     path('', include('users.urls')),
 ]
- # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
+#+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])

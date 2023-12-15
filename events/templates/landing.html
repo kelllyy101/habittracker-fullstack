@@ -1,145 +1,181 @@
 <!-- templates/landing_page.html -->
 {% extends 'base_template.html' %}
-
+{% load static %}
 {% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 
+<main id="main">
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
 
-<!-- ======= Hero Section ======= -->
-<section id="hero">
-
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center"
-                data-aos="fade-up">
-                <div>
-                    <h1>Build Habits you won't quit</h1>
-                    <h2>Start building positive habits for a healthier and happier life. Track your daily
-                        activities, set goals, and stay motivated with our habit tracker app.</h2>
-                    <a href="#about" class="btn-get-started scrollto">Get Started</a>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center"
+                    data-aos="fade-up">
+                    <div>
+                        <h1>Build Habits you won't quit</h1>
+                        <h2>Start building positive habits for a healthier and happier life. Track your daily
+                            activities, set goals, and stay motivated with our habit tracker app.</h2>
+                        <a href="register_user" class="btn-get-started scrollto">Get Started</a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
-                <img src="assets/img/hero-img.png" class="img-fluid" alt="">
+                <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
+                    <img src="assets/img/hero-img.png" class="img-fluid" alt="woman writing down her habits">
+                </div>
             </div>
         </div>
+
+    </section>
+    <!-- End Hero -->
+
+
+    <div class="container px-4 py-5 nerd-featured-container" id="custom-cards">
+        <h2 class="pb-2 nerd-page-subheading">Building lasting habits is hard</h2>
+        <h3> 72% of New Years Resolutions Fail </h3>
+        <h4> Don't be one of them</h4>
+
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-3">
+
+
+
+            <a href="#" class="image-link">
+                <div class="card card-cover overflow-hidden text-bg-dark rounded-4 shadow-lg">
+
+                    <div class="d-flex flex-column p-5 pb-3 text-white text-shadow-1">
+                        <h2 class="nerd-card-title pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Set A Goal
+                        </h2>
+                        <ul class="d-flex list-unstyled mt-auto">
+
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+
+
+            <a href="#" class="image-link">
+                <div class="card card-cover overflow-hidden text-bg-dark rounded-4 shadow-lg">
+
+                    <div class="d-flex flex-column p-5 pb-3 text-white text-shadow-1">
+                        <h2 class="nerd-card-title pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Try Your Best
+                        </h2>
+                        <ul class="d-flex list-unstyled mt-auto">
+
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+
+
+            <a href="#" class="image-link">
+                <div class="card card-cover overflow-hidden text-bg-dark rounded-4 shadow-lg">
+
+
+                    <div class="d-flex flex-column p-5 pb-3 text-white text-shadow-1">
+                        <h2 class="nerd-card-title pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Stick With It
+                        </h2>
+                        <ul class="d-flex list-unstyled mt-auto">
+
+                        </ul>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    </div>
+    </div>
     </div>
 
-</section>
-<!-- End Hero -->
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container">
 
-
-<div class="container px-4 py-5 nerd-featured-container" id="custom-cards">
-    <h2 class="pb-2 nerd-page-subheading">Building lasting habits is hard</h2>
-    <h3> 72% of New Years Resolutions Fail </h3>
-    <h4> Don't be one of them</h4>
-
-    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-3">
-
-
-
-        <a href="#" class="image-link">
-            <div class="card card-cover overflow-hidden text-bg-dark rounded-4 shadow-lg">
-
-                <div class="d-flex flex-column p-5 pb-3 text-white text-shadow-1">
-                    <h2 class="nerd-card-title pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Set A Goal
-                    </h2>
-                    <ul class="d-flex list-unstyled mt-auto">
-
-                    </ul>
+            <div class="row">
+                <div class="col-lg-6" data-aos="zoom-in">
+                    <img src="assets/img/about.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 d-flex flex-column justify-contents-center" data-aos="fade-left">
+                    <div class="content pt-4 pt-lg-0">
+                        <h3>Become a Productivity SuperHero</h3>
+                        <p class="fst-italic">
+                            Harness the power of our personalized habit tracker app to streamline your everyday routines and achieve your goals.
+                            Stay Empowered by
+                            Your Progress
+                        </p>
+                        <ul>
+                            <li><i class="bi bi-check-circle"></i> Stay Empowered by
+                                Your Progress</li>
+                            <li><i class="bi bi-check-circle"></i> Fuel your journey with insightful metrics, celebrate your milestones, and stay motivated on your path to success.</li>
+                            <li><i class="bi bi-check-circle"></i> Scientific studies show that tracking your progress can significantly boost your chances of successfully building and maintaining habits.
+                            </li>
+                        </ul>
+                        <p>
+                            Habits you desire will become quests you'll be excited to complete. No motivation is needed when having fun!
+                        </p>
+                    </div>
                 </div>
             </div>
-        </a>
+
+        </div>
+    </section><!-- End About Section -->
 
 
 
-        <a href="#" class="image-link">
-            <div class="card card-cover overflow-hidden text-bg-dark rounded-4 shadow-lg">
+    <div class="container px-4 py-5 nerd-featured-container" id="custom-cards">
+        <h2 class="pb-2 nerd-page-subheading">Habits made easy</h2>
 
-                <div class="d-flex flex-column p-5 pb-3 text-white text-shadow-1">
-                    <h2 class="nerd-card-title pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Try Your Best
-                    </h2>
-                    <ul class="d-flex list-unstyled mt-auto">
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-3">
 
-                    </ul>
+            <a href="#" class="image-link">
+                <div class="card card-cover overflow-hidden text-bg-dark rounded-4 shadow-lg">
+
+                    <div class="d-flex flex-column p-5 pb-3 text-white text-shadow-1">
+                        <h2 class="nerd-card-title pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Exercise More
+                        </h2>
+                        <ul class="d-flex list-unstyled mt-auto">
+
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
 
 
 
-        <a href="#" class="image-link">
-            <div class="card card-cover overflow-hidden text-bg-dark rounded-4 shadow-lg">
+            <a href="#" class="image-link">
+                <div class="card card-cover overflow-hidden text-bg-dark rounded-4 shadow-lg">
+                    <div class="d-flex flex-column p-5 pb-3 text-white text-shadow-1">
+                        <h2 class="nerd-card-title pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Read Daily
+                        </h2>
+                        <ul class="d-flex list-unstyled mt-auto">
 
-
-                <div class="d-flex flex-column p-5 pb-3 text-white text-shadow-1">
-                    <h2 class="nerd-card-title pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Stick With It
-                    </h2>
-                    <ul class="d-flex list-unstyled mt-auto">
-
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
+
+
+
+            <a href="#" class="image-link">
+                <div class="card card-cover overflow-hidden text-bg-dark rounded-4 shadow-lg">
+                    <div class="d-flex flex-column p-5 pb-3 text-white text-shadow-1">
+                        <h2 class="nerd-card-title pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Meditate constantly
+                        </h2>
+                        <ul class="d-flex list-unstyled mt-auto">
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+
+
+
+        </div>
     </div>
-</div>
-</div>
-</div>
-</div>
-
-
-
-<div class="container px-4 py-5 nerd-featured-container" id="custom-cards">
-    <h2 class="pb-2 nerd-page-subheading">Habits made easy</h2>
-
-    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-3">
-
-        <a href="#" class="image-link">
-            <div class="card card-cover overflow-hidden text-bg-dark rounded-4 shadow-lg">
-
-                <div class="d-flex flex-column p-5 pb-3 text-white text-shadow-1">
-                    <h2 class="nerd-card-title pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Exercise More
-                    </h2>
-                    <ul class="d-flex list-unstyled mt-auto">
-
-                    </ul>
-                </div>
-            </div>
-        </a>
-
-
-
-        <a href="#" class="image-link">
-            <div class="card card-cover overflow-hidden text-bg-dark rounded-4 shadow-lg">
-                <div class="d-flex flex-column p-5 pb-3 text-white text-shadow-1">
-                    <h2 class="nerd-card-title pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Read Daily
-                    </h2>
-                    <ul class="d-flex list-unstyled mt-auto">
-
-                    </ul>
-                </div>
-            </div>
-        </a>
-
-
-
-        <a href="#" class="image-link">
-            <div class="card card-cover overflow-hidden text-bg-dark rounded-4 shadow-lg">
-                <div class="d-flex flex-column p-5 pb-3 text-white text-shadow-1">
-                    <h2 class="nerd-card-title pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Meditate constantly
-                    </h2>
-                    <ul class="d-flex list-unstyled mt-auto">
-                    </ul>
-                </div>
-            </div>
-        </a>
-
-
-
-
     </div>
-</div>
-</div>
-</div>
+    </div>
+
+</main>
 
 
 {% endblock %}

@@ -64,3 +64,6 @@ def delete_habit(request, item_id):
     return redirect('get_habits')
 
 
+@login_required
+def admin_view(request, item_id):
+    return redirect('admin/')
