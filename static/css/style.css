@@ -56,7 +56,7 @@
   border-radius: 3px;
   transition: 0.5s;
   color: #fefefe;
-  background: #84f795;
+  background: #59e86e;
 }
 
 #hero .btn-get-started:hover {
@@ -98,6 +98,6 @@
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background-color: #84f795;
+  background-color: #59e86e;
   color: white
 }
