@@ -17,7 +17,7 @@
     <main class="d-flex flex-column align-items-center justify-content-center">
         <h1 text-dark mx-5 px-4>Add a New Habit
         </h1>
-        <form class="m-5 justify-content-center form-control mb-3" action="add" method="POST" autofocus>
+        <form class="bg-light align-items-center form-control" action="add" method="POST" autofocus>
             {% csrf_token %}
             {{ form.as_p }}
             <p class="text-dark m-1 p-1">How often do you want to complete this habit?</p>
@@ -25,37 +25,12 @@
         <input type="checkbox" class="btn-check" id="{{ day }}" name="frequency" autocomplete="off" value="{{ day }}">
          <label class="btn btn-outline-light m-1" for=" day }}"> days[day] }}</label>
         {% endfor } -->
-
-            <input type="checkbox" class="btn-check" id="0" name="frequency" autocomplete="off" value="0">
-            <label class="btn btn-outline-dark m-1" for="0">Sun</label>
-
-            <input type="checkbox" class="btn-check" id="1" name="frequency" autocomplete="off" value="1">
-            <label class="btn btn-outline-dark m-1" for="1">Mon</label>
-
-            <input type="checkbox" class="btn-check" id="2" name="frequency" autocomplete="off" value="2">
-            <label class="btn btn-outline-dark m-1" for="2">Tues</label>
-
-            <input type="checkbox" class="btn-check" id="3" name="frequency" autocomplete="off" value="3">
-            <label class="btn btn-outline-dark m-1" for="3">Wed</label>
-
-            <input type="checkbox" class="btn-check" id="4" name="frequency" autocomplete="off" value="4">
-            <label class="btn btn-outline-dark m-1" for="4">Thurs</label>
-
-            <input type="checkbox" class="btn-check" id="5" name="frequency" autocomplete="off" value="5">
-            <label class="btn btn-outline-dark m-1" for="5">Fri</label>
-
-            <input type="checkbox" class="btn-check" id="6" name="frequency" autocomplete="off" value="6">
-            <label class="btn btn-outline-dark m-1" for="6">Sat</label>
-
-
             <div class="d-flex justify-content-center w-100 my-4">
                 <p>
-                    <button type="submit" class="btn btn-outline-warning w-25 btn-lg">Add Habit</button>
+                    <button type="submit" class="btn btn-outline-dark btn-lg">Add Habit</button>
                 </p>
             </div>
         </form>
-
-
     </main>
 
     <!-- <form method="POST" action="add">

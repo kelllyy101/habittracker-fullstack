@@ -6,9 +6,14 @@ from django.db import models
 class Item(models.Model):
     name = models.CharField(max_length=50, null=False, blank=False)
     done = models.BooleanField(null=False, blank=False, default=False)
-    description = models.TextField(max_length=200, blank=True)
-    frequency = models.IntegerField(null=True, blank=True)
-    
+    monday = models.BooleanField(null=False, blank=False, default=False)
+    tuesday = models.BooleanField(null=False, blank=False, default=False)
+    wednesday = models.BooleanField(null=False, blank=False, default=False)
+    thursday = models.BooleanField(null=False, blank=False, default=False)
+    friday = models.BooleanField(null=False, blank=False, default=False)
+    saturday = models.BooleanField(null=False, blank=False, default=False)
+    sunday = models.BooleanField(null=False, blank=False, default=False)
+
     def __str__(self):
         return self.name
 

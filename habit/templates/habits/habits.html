@@ -1,14 +1,18 @@
 {% extends 'base_template.html' %}
 
+
 {% block content %}
+
+
+
 
 
 
 <main class="d-flex flex-column align-items-center justify-content-center">
     <div class="container h-100">
-        <h3 class="text-light p-0 mb-5">Hi there, <em class="text-warning h3">1</em>!</h3>
+        <h3 class="text-dark p-0 mb-5">Hi there, <em class="text-dark h3"></em>!</h3>
         <div class="d-flex justify-content-between align-items-center my-3">
-            <em class="text-light m-0 h5">15 December, 2023</em>
+            <em class="text-dark m-0 h5">15 December, 2023</em>
             <button id="clear" type="button" class="btn btn-outline-warning btn-sm"
                 title="clear all checked habits">Clear</button>
         </div>
@@ -17,50 +21,144 @@
             </div>
         </div>
 
-        {% if items %}
-        <table class="table text-light my-4">
+
+        <table class="table text-dark my-4">
             <thead>
                 <tr>
+
+
                     <th></th>
-                    {% for day in days %}
-                    <th id={{ day }} scope="col">{{ days[day] }}</th>
-                    {% endfor %}
+
+
+                    <th id=0 scope="col">Edit</th>
+
+
+                    <th id=1 scope="col">Delete</th>
+
+
+                    <th id=2 scope="col">Mon</th>
+
+
+                    <th id=3 scope="col">Tues</th>
+                    <th id=4 scope="col">Wed</th>
+                    <th id=5 scope="col">Thurs</th>
+                    <th id=6 scope="col">Fri</th>
+                    <th id=7 scope="col">Sat</th>
+                    <th id=8 scope="col">Sun</th>
                 </tr>
             </thead>
             <tbody>
-                {% for item in items %}
                 <tr style="line-height: 2rem;">
-                    <th scope="row">{{ item.name }}</th>
-                    {% for day in days %}
+                    <th scope="row">Drink Water</th>
                     <td>
-                        {% if day in item.frequency %}
-                        {% set id = [day, item.id] | join(' ') %}
-                        <input type="checkbox" class="form-check-input border-light bg-transparent" style="height: 1.6rem; width: 1.6rem;" id="{{ id }}" {{ checks[id] }}>
-                        {% endif %}
                     </td>
-                    {% endfor %}
+                    <td>
+                    </td>
+                    <td>
+                        <input type="checkbox" class="form-check-input border-light bg-transparent"
+                            style="height: 1.6rem; width: 1.6rem;" id="2 1">
+                    </td>
+                    <td>
+                        <input type="checkbox" class="form-check-input border-light bg-transparent"
+                            style="height: 1.6rem; width: 1.6rem;" id="3 1">
+                    </td>
+                    <td>
+                        <input type="checkbox" class="form-check-input border-light bg-transparent"
+                            style="height: 1.6rem; width: 1.6rem;" id="4 1">
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+
+
+                {% for item in items %}
+                <tr>
+                    <td>{{ item.name }}</td>
+                    <td>
+                        <a href="/edit/{{ item.id }}">
+                            Edit
+                        </a>
+                    </td>
+                    <td>
+                        <a href="/delete/{{ item.id }}">
+                            Delete
+                        </a>
+                    </td>
+                    <!-- <td>
+                        <input type="checkbox" class="btn-check" id="0" name="frequency" autocomplete="off"
+                            checked={{ item.monday }}>
+                        <label class="btn btn-outline-dark m-1" for="0"></label>
+
+                    </td> -->
+
+                    <td>
+                        <input type="checkbox" class="btn-check" id="0" name="frequency" autocomplete="off">
+                        <label class="btn btn-outline-dark m-1" for="item.id"></label>
+                    </td>
+
+                    <td>
+                        <input type="checkbox" class="btn-check" id="1" name="frequency" autocomplete="off"
+                            value="{{item.tuesday}}">
+                        <label class="btn btn-outline-dark m-1" for="0"></label>
+
+                    </td>
+                    <td>
+                        <input type="checkbox" class="btn-check" id="2" name="frequency" autocomplete="off"
+                            value="{{item.wednesday}}">
+                        <label class="btn btn-outline-dark m-1" for="0"></label>
+
+                    </td>
+                    <td>
+                        <input type="checkbox" class="btn-check" id="3" name="frequency" autocomplete="off"
+                            value="{{item.thursday}}">
+                        <label class="btn btn-outline-dark m-1" for="0"></label>
+
+                    </td>
+                    <td>
+                        <input type="checkbox" class="btn-check" id="4" name="frequency" autocomplete="off"
+                            value="{{item.friday}}">
+                        <label class="btn btn-outline-dark m-1" for="0"></label>
+
+                    </td>
+                    <td>
+                        <input type="checkbox" class="btn-check" id="5" name="frequency" autocomplete="off"
+                            value="{{item.saturday}}">
+                        <label class="btn btn-outline-dark m-1" for="0"></label>
+
+                    </td>
+                    <td>
+                        <input type="checkbox" class="btn-check" id="6" name="frequency" autocomplete="off"
+                            value="{{item.sunday}}">
+                        <label class="btn btn-outline-dark m-1" for="0"></label>
+
+                    </td>
+
+
+
+
+
+
+                </tr>
+                {% empty %}
+                <tr>
+                    <td>Create New Habits</td>
                 </tr>
                 {% endfor %}
-            </tbody>
         </table>
-    </div>
-
-    {% else %}
-</div>  
-    <em class="h5 m-5" style="color: var(--bs-gray);">You have no habits yet...</em>
-    {% endif %}
-       
-    
-<div class="d-flex justify-content-center w-100 my-4">
-<a href = "/add">Add a Habit</a>
-</div>
+        <div class="d-flex justify-content-center w-100 my-4">
+            <a href="/add">Add a Habit</a>
+        </div>
 
 
-   
 
 </main>
 
+
 <script src="/static/script.js"></script>
+
+
 
 
 {% endblock %}

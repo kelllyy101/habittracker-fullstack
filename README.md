@@ -40,6 +40,7 @@ Happy coding!
 
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
+- [Introduction](#introduction)
 - [User Experience Design (UX)](#user-experience-design-ux)
     + [Typography](#typography)
     + [Wireframes](#wireframes)
@@ -79,6 +80,51 @@ Happy coding!
   - [Media and Credits](#media-and-credits)
 - [Thanks to](#thanks-to)
 
+
+
+# Habit Tracker App - Django Readme
+
+Welcome to the Habit Tracker app, a powerful tool designed to help users build and maintain healthy habits. This application is built using Django, offering a user-friendly interface to track and manage your daily routines.
+
+## Overview
+
+The Habit Tracker app serves as a personalized habit management system, allowing users to register, track their habits, and leverage essential features to enhance their daily routines.
+
+## Features
+
+### User Registration and Submission
+
+- **User Registration:** Sign up to create an account and start utilizing the habit tracking features.
+- **Resource Submission:** Users can contribute resources to the habit directory, sharing valuable insights with the community.
+
+### Interaction and Organization
+
+- **Upvoting and Bookmarking:** Users can express appreciation for helpful resources by upvoting and bookmarking them.
+- **Agile Principles:** Built with Agile management principles, ensuring flexibility and responsiveness to user needs.
+
+### Project Management
+
+- **GitHub Integration:** Leveraging GitHub features such as Issues and Projects to implement Scrum methodology.
+- **Kanban Board:** A visual representation of the project's progress and tasks, providing clarity on work status.
+- **Closed Issues:** Detailed records of resolved issues, showcasing the dedication to maintaining a bug-free application.
+
+### CRUD Functionality
+
+- **Resource Management:** Users can create, update, and delete resources they contribute, ensuring content relevance.
+- **Account Management:** Users have full control over their accounts, with the ability to create, update, read, and delete profiles.
+- **Admin Privileges:** Admins can manage all resources efficiently, ensuring the integrity of the habit directory.
+
+### Project Planning and Execution
+
+- **GitHub Tags:** Efficient use of tags for assigning story points, prioritizing features based on the MoSCoW method, and categorizing user stories.
+- **Milestones:** Strategically plan sprints and set deadlines using GitHub's Milestones feature.
+
+## Learning and Development
+
+- **Continuous Improvement:** Regular updates and bug fixes based on user feedback and reported issues.
+- **Educational Background:** Drawing insights from the Agile Foundations course on LinkedIn Learning to enhance project management skills and understanding of Agile and Scrum methodologies.
+
+Feel free to explore the Habit Tracker app, track your habits effortlessly, and contribute to the growth of a supportive community. Happy habit building!
 
 #user-stories
 1. Create User Account  
