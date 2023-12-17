@@ -124,7 +124,7 @@ The Habit Tracker app serves as a personalised habit management system, allowing
 
 Feel free to explore the Habit Tracker app, track your habits effortlessly, and contribute to the growth of a supportive community. Happy habit building!
 
-#user-stories
+## User-stories
 1. Create User Account  
     As a new user, I want to create a personalized account by providing my email and a secure password, so I can start tracking my habits.
 
@@ -192,16 +192,24 @@ Feel free to explore the Habit Tracker app, track your habits effortlessly, and 
 # Deployment
 Heroku is a platform that allows you to deploy and host your applications, which is what I used for this expense tracker and these are the following steps I took:
 
-I signed up for a Heroku account at https://www.heroku.com/.
+I logged in to my Heroku account at https://www.heroku.com/.
 
 I installed the Heroku Command Line Interface (CLI) on your system. This CLI tool lets you manage and deploy your Heroku apps from the command line.
 
-I ensured your project is in a Git repository.
+I ensured my project is in a Git repository, copying and pasting the name to connect Heroku to GitHub successfully.
 
 A requirements.txt file and a Procfile was added from Code Institute's template so the project would deploy successfully.
 
-I created a new Heroku app using the Heroku CLI after I logged into my account and made sure my Git repository was connected.
+I created a new Heroku app using the Heroku CLI after I logged into my account and made sure my Git repository was connected. I also enabled the automatic deployment.
 
 Before creating the app, I added two buildpacks from the Settings tab making sure to add heroku/python first, followed by heroku/nodejs.
 
 I deployed my project to Heroku by pushing your Git repository to Heroku's remote, that will update with every git push, as chosen by me in the settings, successfully integrating and deploying my project for use through the Heroku URL.
+
+
+## Media-and-credits
+Bootstrap was used extensively in the project.
+
+
+## Thanks-to
+I would like to express my gratitude to Code Institute and my mentor for their exceptional web development curriculum and to my mentor for their invaluable guidance and support throughout this project. Thank you for providing the resources and expertise that have helped me grow as a developer.
