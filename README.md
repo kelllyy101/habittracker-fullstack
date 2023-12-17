@@ -124,6 +124,10 @@ The Habit Tracker app serves as a personalised habit management system, allowing
 
 Feel free to explore the Habit Tracker app, track your habits effortlessly, and contribute to the growth of a supportive community. Happy habit building!
 
+#### Wireframe
+![Alt text](/static/readme_images/Screenshot%20(774).png>)
+![Alt text](</static/readme_images/Screenshot (775).png>)
+
 ## User-stories
 1. Create User Account  
     As a new user, I want to create a personalized account by providing my email and a secure password, so I can start tracking my habits.
@@ -209,6 +213,7 @@ I deployed my project to Heroku by pushing your Git repository to Heroku's remot
 
 ## Media-and-credits
 Bootstrap was used extensively in the project.
+Code Institute's To-Do list walk through project was a big help setting the base of this project.
 
 
 ## Thanks-to
