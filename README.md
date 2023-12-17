@@ -44,6 +44,8 @@ Happy coding!
 - [User Experience Design (UX)](#user-experience-design-ux)
     + [Typography](#typography)
     + [Wireframes](#wireframes)
+- [Accessibility]('accessibility)
+- [Database Desgign](#database-design)
 - [The Strategy Plane](#the-strategy-plane)
   - [Site Goals](#site-goals)
   - [User Stories](#user-stories)
@@ -124,9 +126,108 @@ The Habit Tracker app serves as a personalised habit management system, allowing
 
 Feel free to explore the Habit Tracker app, track your habits effortlessly, and contribute to the growth of a supportive community. Happy habit building!
 
+## User Experience
+As the project is a directory of design resources, I wanted to try something fun and bold with the design and was inspired by the trend for neubrutalism web design, and websites such as
+
+#### Typography
+A display font called  was used for the logo as it fitted the neubrutalist theme of the site.
+
+
 #### Wireframe
 ![Alt text](/static/readme_images/Screenshot%20(774).png>)
 ![Alt text](</static/readme_images/Screenshot (775).png>)
+
+## Database Design
+Certainly! Here's a concise and formatted version for your README:
+
+# Habit Tracker Django App - Database Design
+
+## Title:
+Habit Tracker Django App Database Flow Diagram
+
+## Models:
+
+### 1. `Item` Model
+   - **Fields:**
+     - `name`: CharField
+     - `done`: BooleanField
+     - `monday` to `sunday`: BooleanFields
+   - **Methods:**
+     - `__str__`: Returns the name of the habit
+   - **Description:** Represents a habit item with details such as name, completion status, and days of the week.
+
+### 2. `HabitUsers` Model
+   - **Fields:**
+     - `first_name`: CharField
+     - `last_name`: CharField
+     - `email`: EmailField
+     - `shared_users`: ManyToManyField to `Item`
+   - **Methods:**
+     - `__str__`: Returns the full name of the user
+   - **Description:** Represents a user with personal details and habits shared with them.
+
+## Views:
+
+### 1. `home` Function
+   - **Input:** None
+   - **Output:** HTML page (`home.html`)
+   - **Description:** Renders the home page for the application.
+
+### 2. `get_habits` Function
+   - **Input:** User session data
+   - **Output:** HTML page (`habits.html`) with a list of habits
+   - **Description:** Retrieves and displays a list of habits for the authenticated user.
+
+### 3. `add_habit` Function
+   - **Input:** Habit data from a form
+   - **Output:** Redirect to `get_habits` view
+   - **Description:** Adds a new habit to the database.
+
+### 4. `edit_habit` Function
+   - **Input:** Habit data from a form
+   - **Output:** Redirect to `get_habits` view
+   - **Description:** Edits an existing habit in the database.
+
+### 5. `toggle_habit` Function
+   - **Input:** Habit ID
+   - **Output:** Redirect to `get_habits` view
+   - **Description:** Toggles the status (done/not done) of a habit in the database.
+
+### 6. `delete_habit` Function
+   - **Input:** Habit ID
+   - **Output:** Redirect to `get_habits` view
+   - **Description:** Deletes a habit from the database.
+
+### 7. `admin_view` Function
+   - **Input:** None
+   - **Output:** Redirect to the admin panel (`admin/`)
+   - **Description:** Redirects the user to the Django admin panel.
+
+### 8. `landing` Function
+   - **Input:** None
+   - **Output:** HTML page (`landing.html`)
+   - **Description:** Renders the landing page for the application.
+
+### 9. `register_user` Function
+   - **Input:** User registration data from a form
+   - **Output:** Redirect to `login` view
+   - **Description:** Handles user registration and authentication.
+
+### 10. `login_user` Function
+   - **Input:** User login credentials
+   - **Output:** Redirect to `get_habits` view or `login` view with an error message
+   - **Description:** Handles user login and redirects accordingly.
+
+### 11. `logout_user` Function
+   - **Input:** None
+   - **Output:** Redirect to `login` view
+   - **Description:** Logs out the user and redirects to the login page.
+
+## URLs:
+
+Include URLs only if they are relevant to the data flow. For example, if you have specific URLs related to the views mentioned above (e.g., URL patterns for habit-related actions), you can include them in the diagram.
+
+Remember to use appropriate symbols or notations for representing data flow and interactions between components in your diagram.
 
 ## User-stories
 1. Create User Account  
