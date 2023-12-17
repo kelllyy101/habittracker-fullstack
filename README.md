@@ -88,41 +88,39 @@ Welcome to the Habit Tracker app, a powerful tool designed to help users build a
 
 ## Overview
 
-The Habit Tracker app serves as a personalized habit management system, allowing users to register, track their habits, and leverage essential features to enhance their daily routines.
+The Habit Tracker app serves as a personalised habit management system, allowing users to register, track their habits, and leverage essential features to enhance their daily routines.
 
 ## Features
 
 ### User Registration and Submission
 
-- **User Registration:** Sign up to create an account and start utilizing the habit tracking features.
-- **Resource Submission:** Users can contribute resources to the habit directory, sharing valuable insights with the community.
+- **User Registration:** Sign up to create an account and start utilising the habit tracking features.
 
 ### Interaction and Organization
 
-- **Upvoting and Bookmarking:** Users can express appreciation for helpful resources by upvoting and bookmarking them.
 - **Agile Principles:** Built with Agile management principles, ensuring flexibility and responsiveness to user needs.
 
 ### Project Management
 
-- **GitHub Integration:** Leveraging GitHub features such as Issues and Projects to implement Scrum methodology.
-- **Kanban Board:** A visual representation of the project's progress and tasks, providing clarity on work status.
+- **GitHub Integration:** Leveraging GitHub features such as Issues and Projects to implement Agile methodology.
+- **Heroku:** Deployed this app using Heroku.
 - **Closed Issues:** Detailed records of resolved issues, showcasing the dedication to maintaining a bug-free application.
 
 ### CRUD Functionality
 
-- **Resource Management:** Users can create, update, and delete resources they contribute, ensuring content relevance.
-- **Account Management:** Users have full control over their accounts, with the ability to create, update, read, and delete profiles.
+- **Resource Management:** Users can create, update, and delete habits they have created, ensuring content relevance.
+- **Account Management:** Users have full control over their accounts, with the ability to create, update, read, and delete habits.
 - **Admin Privileges:** Admins can manage all resources efficiently, ensuring the integrity of the habit directory.
 
 ### Project Planning and Execution
 
-- **GitHub Tags:** Efficient use of tags for assigning story points, prioritizing features based on the MoSCoW method, and categorizing user stories.
+- **GitHub Tags:** Efficient use of tags for assigning story points, prioritizing features based on categorising user stories.
 - **Milestones:** Strategically plan sprints and set deadlines using GitHub's Milestones feature.
 
 ## Learning and Development
 
-- **Continuous Improvement:** Regular updates and bug fixes based on user feedback and reported issues.
-- **Educational Background:** Drawing insights from the Agile Foundations course on LinkedIn Learning to enhance project management skills and understanding of Agile and Scrum methodologies.
+- **Continuous Improvement:** Regular updates and bug fixes based on user feedback and reported issues that I found during manual testing.
+- **Educational Background:** Drawing insights from the Agile Foundations course on Code Institute, while learning to enhance project management skills and understanding of Agile methodologies.
 
 Feel free to explore the Habit Tracker app, track your habits effortlessly, and contribute to the growth of a supportive community. Happy habit building!
 
@@ -189,3 +187,21 @@ Feel free to explore the Habit Tracker app, track your habits effortlessly, and 
 
 21. Responsive Design for Mobile  
     As a user, I want the habit tracker application to be responsive on mobile devices, ensuring that I can conveniently track habits on the go.
+
+
+# Deployment
+Heroku is a platform that allows you to deploy and host your applications, which is what I used for this expense tracker and these are the following steps I took:
+
+I signed up for a Heroku account at https://www.heroku.com/.
+
+I installed the Heroku Command Line Interface (CLI) on your system. This CLI tool lets you manage and deploy your Heroku apps from the command line.
+
+I ensured your project is in a Git repository.
+
+A requirements.txt file and a Procfile was added from Code Institute's template so the project would deploy successfully.
+
+I created a new Heroku app using the Heroku CLI after I logged into my account and made sure my Git repository was connected.
+
+Before creating the app, I added two buildpacks from the Settings tab making sure to add heroku/python first, followed by heroku/nodejs.
+
+I deployed my project to Heroku by pushing your Git repository to Heroku's remote, that will update with every git push, as chosen by me in the settings, successfully integrating and deploying my project for use through the Heroku URL.
