@@ -223,13 +223,8 @@ Habit Tracker Django App Database Flow Diagram
    - **Output:** Redirect to `login` view
    - **Description:** Logs out the user and redirects to the login page.
 
-## URLs:
 
-Include URLs only if they are relevant to the data flow. For example, if you have specific URLs related to the views mentioned above (e.g., URL patterns for habit-related actions), you can include them in the diagram.
-
-Remember to use appropriate symbols or notations for representing data flow and interactions between components in your diagram.
-
-## User-stories
+#### User-stories
 1. Create User Account  
     As a new user, I want to create a personalized account by providing my email and a secure password, so I can start tracking my habits.
 

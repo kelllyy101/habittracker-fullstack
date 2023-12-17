@@ -27,7 +27,6 @@
               Habits
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="{% url 'get_habits' %}">All Habits</a></li>
               {% if user.is_authenticated %}
               <li><a class="dropdown-item" href="{% url 'get_habits' %}">All Habits</a></li>
               <li><a class="dropdown-item" href="{% url 'add' %}">Add Habits</a></li>
@@ -50,7 +49,7 @@
             <a class="nav-link" href="{% url 'register_user' %}">Register</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'login' %}">Login</a>
+            <a class="nav-link btn btn-outline-primary" href="{% url 'login' %}">Login</a>
           </li>
         {% endif %}
   
@@ -59,7 +58,7 @@
           {% csrf_token %}
   
           <input class="form-control me-2" type="search" placeholder="Search Habits" aria-label="Search" name="searched">
-          <button class="btn btn-outline-secondary" type="submit">Search</button>
+          <button class="btn btn-outline-primary" type="submit">Search</button>
         </form>
       </div>
     </div>
