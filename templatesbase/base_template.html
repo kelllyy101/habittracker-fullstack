@@ -60,12 +60,14 @@
     <!-- Grid container -->
     <div class="container p-4 pb-0">
       <!-- Section: CTA -->
+      {% if user.is_anonymous %}
       <section class="">
         <p class="d-flex justify-content-center align-items-center">
           <span class="me-3">Register for free</span>
           <a class="btn btn-outline-light btn-rounded" href="register_user" role=" button">Get Started</a>
         </p>
       </section>
+      {% endif %}
       <!-- Section: CTA -->
     </div>
     <!-- Grid container -->
