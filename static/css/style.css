@@ -1,14 +1,7 @@
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-#hero {
-  width: 100%;
-  background: white;
-  background-size: contain;
-  background-position: right top;
-  margin-top: 70px;
-  padding: 60px 0;
-}
+
 
 #hero h1 {
   margin: 0 0 20px 0;
@@ -131,12 +124,4 @@
 }
 
 
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-#footer {
-  background-color: #000000;
-  color: white;
-  text-decoration: none;
-}
 

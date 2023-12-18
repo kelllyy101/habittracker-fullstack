@@ -33,33 +33,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr style="line-height: 2rem;">
-                    <th scope="row">Drink Water</th>
-                    <td>
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                        <input type="checkbox" class="form-check-input border-light bg-transparent"
-                            style="height: 1.6rem; width: 1.6rem;" id="2 1">
-                    </td>
-                    <td>
-                        <input type="checkbox" class="form-check-input border-light bg-transparent"
-                            style="height: 1.6rem; width: 1.6rem;" id="3 1">
-                    </td>
-                    <td>
-                        <input type="checkbox" class="form-check-input border-light bg-transparent"
-                            style="height: 1.6rem; width: 1.6rem;" id="4 1">
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                    </td>
-                </tr>
-
-
                 {% for item in items %}
-                <tr>
+                <tr style="line-height: 2rem;">
                     <td>{{ item.name }}</td>
                     <td>
                         <a href="/edit/{{ item.id }}">
@@ -71,53 +46,33 @@
                             Delete
                         </a>
                     </td>
-                    <!-- <td>
-                        <input type="checkbox" class="btn-check" id="0" name="frequency" autocomplete="off"
-                            checked={{ item.monday }}>
-                        <label class="btn btn-outline-dark m-1" for="0"></label>
-
-                    </td> -->
-
                     <td>
-                        <input type="checkbox" class="btn-check" id="0" name="frequency" autocomplete="off">
-                        <label class="btn btn-outline-dark m-1" for="item.id"></label>
-                    </td>
-
-                    <td>
-                        <input type="checkbox" class="btn-check" id="1" name="frequency" autocomplete="off"
-                            value="{{item.tuesday}}">
-                        <label class="btn btn-outline-dark m-1" for="0"></label>
-
+                        <input type="checkbox" class="form-check-input border-light"
+                            style="height: 1.6rem; width: 1.6rem;" id="2 1" {% if item.monday %}checked{% endif %}>
                     </td>
                     <td>
-                        <input type="checkbox" class="btn-check" id="2" name="frequency" autocomplete="off"
-                            value="{{item.wednesday}}">
-                        <label class="btn btn-outline-dark m-1" for="0"></label>
-
+                        <input type="checkbox" class="form-check-input border-light"
+                            style="height: 1.6rem; width: 1.6rem;" id="2 1" {% if item.tuesday %}checked{% endif %}>
                     </td>
                     <td>
-                        <input type="checkbox" class="btn-check" id="3" name="frequency" autocomplete="off"
-                            value="{{item.thursday}}">
-                        <label class="btn btn-outline-dark m-1" for="0"></label>
-
+                        <input type="checkbox" class="form-check-input border-light"
+                            style="height: 1.6rem; width: 1.6rem;" id="2 1" {% if item.wednesday %}checked{% endif %}>
                     </td>
                     <td>
-                        <input type="checkbox" class="btn-check" id="4" name="frequency" autocomplete="off"
-                            value="{{item.friday}}">
-                        <label class="btn btn-outline-dark m-1" for="0"></label>
-
+                        <input type="checkbox" class="form-check-input border-light"
+                            style="height: 1.6rem; width: 1.6rem;" id="2 1" {% if item.thursday %}checked{% endif %}>
                     </td>
                     <td>
-                        <input type="checkbox" class="btn-check" id="5" name="frequency" autocomplete="off"
-                            value="{{item.saturday}}">
-                        <label class="btn btn-outline-dark m-1" for="0"></label>
-
+                        <input type="checkbox" class="form-check-input border-light"
+                            style="height: 1.6rem; width: 1.6rem;" id="2 1" {% if item.friday %}checked{% endif %}>
                     </td>
                     <td>
-                        <input type="checkbox" class="btn-check" id="6" name="frequency" autocomplete="off"
-                            value="{{item.sunday}}">
-                        <label class="btn btn-outline-dark m-1" for="0"></label>
-
+                        <input type="checkbox" class="form-check-input border-light"
+                            style="height: 1.6rem; width: 1.6rem;" id="2 1" {% if item.saturday %}checked{% endif %}>
+                    </td>
+                    <td>
+                        <input type="checkbox" class="form-check-input border-light"
+                            style="height: 1.6rem; width: 1.6rem;" id="2 1" {% if item.sunday %}checked{% endif %}>
                     </td>
                 </tr>
                 {% empty %}
