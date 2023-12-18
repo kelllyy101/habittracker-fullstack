@@ -1,6 +1,6 @@
-import { Ripple, initMDB } from "mdb-ui-kit";
-
-initMDB({ Ripple });
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});
   
   
   /**

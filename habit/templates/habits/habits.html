@@ -36,42 +36,44 @@
                 {% for item in items %}
                 <tr style="line-height: 2rem;">
                     <td>{{ item.name }}</td>
-                    <td>
-                        <a href="/edit/{{ item.id }}">
-                            Edit
-                        </a>
+                    <td><a href="/edit/{{ item.id }}" class="btn btn-white btn-outline-primary btn-sm rounded-0" 
+                        data-toggle="tooltip" data-placement="top" title="Edit">
+                       <i class="fa fa-edit"></i> Edit
+                     </a>
                     </td>
                     <td>
-                        <a href="/delete/{{ item.id }}">
+                        <a href="/delete/{{ item.id }}"class="btn btn-white btn-outline-primary btn-sm rounded-0" 
+                        data-toggle="tooltip" data-placement="top" title="Delete">
+                       <i class="fa fa-delete"></i>
                             Delete
                         </a>
                     </td>
                     <td>
-                        <input type="checkbox" class="form-check-input border-light"
+                        <input type="checkbox" class="form-check-input border-light shadow"
                             style="height: 1.6rem; width: 1.6rem;" id="2 1" {% if item.monday %}checked{% endif %}>
                     </td>
                     <td>
-                        <input type="checkbox" class="form-check-input border-light"
+                        <input type="checkbox" class="form-check-input border-light shadow"
                             style="height: 1.6rem; width: 1.6rem;" id="2 1" {% if item.tuesday %}checked{% endif %}>
                     </td>
                     <td>
-                        <input type="checkbox" class="form-check-input border-light"
+                        <input type="checkbox" class="form-check-input border-light shadow"
                             style="height: 1.6rem; width: 1.6rem;" id="2 1" {% if item.wednesday %}checked{% endif %}>
                     </td>
                     <td>
-                        <input type="checkbox" class="form-check-input border-light"
+                        <input type="checkbox" class="form-check-input border-light shadow"
                             style="height: 1.6rem; width: 1.6rem;" id="2 1" {% if item.thursday %}checked{% endif %}>
                     </td>
                     <td>
-                        <input type="checkbox" class="form-check-input border-light"
+                        <input type="checkbox" class="form-check-input border-light shadow"
                             style="height: 1.6rem; width: 1.6rem;" id="2 1" {% if item.friday %}checked{% endif %}>
                     </td>
                     <td>
-                        <input type="checkbox" class="form-check-input border-light"
+                        <input type="checkbox" class="form-check-input border-light shadow"
                             style="height: 1.6rem; width: 1.6rem;" id="2 1" {% if item.saturday %}checked{% endif %}>
                     </td>
                     <td>
-                        <input type="checkbox" class="form-check-input border-light"
+                        <input type="checkbox" class="form-check-input border-light shadow"
                             style="height: 1.6rem; width: 1.6rem;" id="2 1" {% if item.sunday %}checked{% endif %}>
                     </td>
                 </tr>
@@ -91,8 +93,7 @@
 
 
 <script src="/static/script.js"></script>
-
-
+<script src="/static/js/main.js"></script>
 
 
 {% endblock %}
