@@ -20,7 +20,8 @@ def home(request):
 
 @login_required
 def get_habits(request):     
-    items = Item.objects.all().order_by('id')
+    request.user.id
+    items = Item.objects.filter(user_id=request.user.id).order_by('id')
     context = {
         'items': items
     }
