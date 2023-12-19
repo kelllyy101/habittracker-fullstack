@@ -150,7 +150,6 @@ Habit Tracker Django App Database Flow Diagram
 ### 1. `Item` Model
    - **Fields:**
      - `name`: CharField
-     - `done`: BooleanField
      - `monday` to `sunday`: BooleanFields
    - **Methods:**
      - `__str__`: Returns the name of the habit
@@ -187,11 +186,6 @@ Habit Tracker Django App Database Flow Diagram
    - **Input:** Habit data from a form
    - **Output:** Redirect to `get_habits` view
    - **Description:** Edits an existing habit in the database.
-
-### 5. `toggle_habit` Function
-   - **Input:** Habit ID
-   - **Output:** Redirect to `get_habits` view
-   - **Description:** Toggles the status (done/not done) of a habit in the database.
 
 ### 6. `delete_habit` Function
    - **Input:** Habit ID

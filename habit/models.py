@@ -6,7 +6,6 @@ from django.db import models
 class Item(models.Model):
     user_id = models.CharField(max_length=50, null=False, blank=False)
     name = models.CharField(max_length=50, null=False, blank=False)
-    done = models.BooleanField(null=False, blank=False, default=False)
     monday = models.BooleanField(null=False, blank=False, default=False)
     tuesday = models.BooleanField(null=False, blank=False, default=False)
     wednesday = models.BooleanField(null=False, blank=False, default=False)

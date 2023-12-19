@@ -58,12 +58,6 @@ def edit_habit(request, item_id):
     }
     return render(request, 'habits/edit_habit.html', context)
 
-@login_required
-def toggle_habit(request, item_id):
-    item = get_object_or_404(Item, id=item_id)
-    item.done = not item.done
-    item.save()
-    return redirect('get_habits')
 
 @login_required
 def delete_habit(request, item_id):

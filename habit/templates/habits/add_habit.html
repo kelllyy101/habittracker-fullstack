@@ -8,7 +8,6 @@
     <form class="bg-light align-items-center form-control" action="add" method="POST" autofocus>
         {% csrf_token %}
         {{ form.as_p }}
-        <p class="text-dark m-1 p-1">How often do you want to complete this habit?</p>
         <div class="d-flex justify-content-center text-center w-100 my-4">
             <p>
                 <button type="submit" class="btn btn-outline-primary btn-lg">Add Habit</button>
