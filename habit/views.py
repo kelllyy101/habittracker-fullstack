@@ -1,5 +1,8 @@
+import json
+
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Item
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .forms import ItemForm
 from django.shortcuts import render, redirect
@@ -17,7 +20,7 @@ def home(request):
 
 @login_required
 def get_habits(request):        
-    items = Item.objects.all()
+    items = Item.objects.all().order_by('id')
     context = {
         'items': items
     }
@@ -46,7 +49,7 @@ def edit_habit(request, item_id):
             return redirect('get_habits')
     form = ItemForm(instance=item)
     context = {
-'form': form
+        'form': form
     }
     return render(request, 'habits/edit_habit.html', context)
 
@@ -67,3 +70,17 @@ def delete_habit(request, item_id):
 @login_required
 def admin_view(request, item_id):
     return redirect('admin/')
+
+
+@login_required
+def tick_habit(request):
+    if request.method == 'POST':
+        body = json.loads(request.body)
+        item_id = body["id"]
+        dof = body["dayOfWeek"]
+        item = get_object_or_404(Item, id=item_id)
+        dof_value = getattr(item, dof)
+        setattr(item, dof, not dof_value)
+        item.save(update_fields=[dof]) 
+ 
+        return HttpResponse()

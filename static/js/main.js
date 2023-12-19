@@ -1,33 +1,32 @@
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip();
-});
-  
-  
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
+checkboxes = document.querySelectorAll('input[type="checkbox"]');
+checkboxes.forEach((checkbox) => {
+  checkbox.addEventListener("change", (e) => {
+    const [id, dayOfWeek] = checkbox.id.split('-');
+    const csrfToken = getCookie("csrftoken");
+    fetch(`/tick/`, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        "X-CSRFToken": csrfToken,
       },
-
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      }
-    }
+      body: JSON.stringify({
+        id: id,
+        dayOfWeek: dayOfWeek,
+      }),
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw Error(res.status);
+        }
+        return res.json();
+      })
+      .catch((err) => console.error(err));
   });
+});
+
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
+}

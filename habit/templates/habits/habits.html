@@ -16,7 +16,6 @@
             </div>
         </div>
 
-
         <table class="table text-dark my-4">
             <thead>
                 <tr>
@@ -50,31 +49,31 @@
                     </td>
                     <td>
                         <input type="checkbox" class="form-check-input border-light shadow"
-                            style="height: 1.6rem; width: 1.6rem;" id="2 1" {% if item.monday %}checked{% endif %}>
+                            style="height: 1.6rem; width: 1.6rem;" id="{{item.id}}-monday" {% if item.monday %}checked{% endif %}>
                     </td>
                     <td>
                         <input type="checkbox" class="form-check-input border-light shadow"
-                            style="height: 1.6rem; width: 1.6rem;" id="2 1" {% if item.tuesday %}checked{% endif %}>
+                            style="height: 1.6rem; width: 1.6rem;" id="{{item.id}}-tuesday" {% if item.tuesday %}checked{% endif %}>
                     </td>
                     <td>
                         <input type="checkbox" class="form-check-input border-light shadow"
-                            style="height: 1.6rem; width: 1.6rem;" id="2 1" {% if item.wednesday %}checked{% endif %}>
+                            style="height: 1.6rem; width: 1.6rem;" id="{{item.id}}-wednesday" {% if item.wednesday %}checked{% endif %}>
                     </td>
                     <td>
                         <input type="checkbox" class="form-check-input border-light shadow"
-                            style="height: 1.6rem; width: 1.6rem;" id="2 1" {% if item.thursday %}checked{% endif %}>
+                            style="height: 1.6rem; width: 1.6rem;" id="{{item.id}}-thursday" {% if item.thursday %}checked{% endif %}>
                     </td>
                     <td>
                         <input type="checkbox" class="form-check-input border-light shadow"
-                            style="height: 1.6rem; width: 1.6rem;" id="2 1" {% if item.friday %}checked{% endif %}>
+                            style="height: 1.6rem; width: 1.6rem;" id="{{item.id}}-friday" {% if item.friday %}checked{% endif %}>
                     </td>
                     <td>
                         <input type="checkbox" class="form-check-input border-light shadow"
-                            style="height: 1.6rem; width: 1.6rem;" id="2 1" {% if item.saturday %}checked{% endif %}>
+                            style="height: 1.6rem; width: 1.6rem;" id="{{item.id}}-saturday" {% if item.saturday %}checked{% endif %}>
                     </td>
                     <td>
                         <input type="checkbox" class="form-check-input border-light shadow"
-                            style="height: 1.6rem; width: 1.6rem;" id="2 1" {% if item.sunday %}checked{% endif %}>
+                            style="height: 1.6rem; width: 1.6rem;" id="{{item.id}}-sunday" {% if item.sunday %}checked{% endif %}>
                     </td>
                 </tr>
                 {% empty %}
@@ -83,6 +82,7 @@
                 </tr>
                 {% endfor %}
         </table>
+
         <div class="d-flex justify-content-center w-100 my-4 btn-white btn-outline-primary btn-sm rounded-0">
             <a href="/add">Add a Habit</a>
         </div>
@@ -92,7 +92,6 @@
 </main>
 
 
-<script src="/static/script.js"></script>
 <script src="/static/js/main.js"></script>
 
 
