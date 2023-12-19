@@ -19,7 +19,7 @@ def home(request):
 
 
 @login_required
-def get_habits(request):        
+def get_habits(request):     
     items = Item.objects.all().order_by('id')
     context = {
         'items': items
@@ -31,8 +31,12 @@ def add_habit(request):
     if request.method == 'POST':
         form  = ItemForm(request.POST)
         if form.is_valid():
-            form.save()
+            habit = form.save(commit=False)
+            setattr(habit, "user_id", request.user.id)
+
+            habit.save()
             return redirect('get_habits')
+
     form = ItemForm()
     context = {
         'form': form
