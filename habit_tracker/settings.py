@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'users',
     'events',
 ]
-)
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
