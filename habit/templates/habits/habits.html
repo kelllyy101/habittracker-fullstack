@@ -19,15 +19,15 @@
             <thead>
                 <tr>
                     <th></th>
-                    <th id=0 scope="col">Edit</th>
-                    <th id=1 scope="col">Delete</th>
-                    <th id=2 scope="col">Mon</th>
-                    <th id=3 scope="col">Tues</th>
-                    <th id=4 scope="col">Wed</th>
-                    <th id=5 scope="col">Thurs</th>
-                    <th id=6 scope="col">Fri</th>
-                    <th id=7 scope="col">Sat</th>
-                    <th id=8 scope="col">Sun</th>
+                    <th id="0" scope="col">Edit</th>
+                    <th id="1" scope="col">Delete</th>
+                    <th id="2" scope="col">Mon</th>
+                    <th id="3" scope="col">Tues</th>
+                    <th id="4" scope="col">Wed</th>
+                    <th id="5" scope="col">Thurs</th>
+                    <th id="6" scope="col">Fri</th>
+                    <th id="7" scope="col">Sat</th>
+                    <th id="8" scope="col">Sun</th>
                 </tr>
             </thead>
             <tbody>
@@ -74,6 +74,7 @@
                         <input type="checkbox" class="form-check-input border-light shadow"
                             style="height: 1.6rem; width: 1.6rem;" id="{{item.id}}-sunday" {% if item.sunday %}checked{% endif %}>
                     </td>
+                    
                 </tr>
                 {% empty %}
                 <tr>

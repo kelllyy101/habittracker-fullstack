@@ -3,8 +3,8 @@
 {% block content %}
 
 <main class="d-flex flex-column align-items-center justify-content-center">
-    <h1 text-dark mx-5 px-4>Add a New Habit
-    </h1>
+    <h2 text-dark mx-5 px-4>Add a New Habit
+    </h2>
     <form class="bg-light align-items-center form-control" action="add" method="POST" autofocus>
         {% csrf_token %}
         {{ form.as_p }}
