@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import dj_database_url
-
+from django.conf import settings
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,6 +30,9 @@ SECRET_KEY = 'django-insecure-y1!b!wucm$b)l$+r21r^mis+wai=zl+55t_hz@*xby%kj^e+5m
 ALLOWED_HOSTS = []
 
 
+LOGIN_URL = "login"
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -43,6 +46,7 @@ INSTALLED_APPS = [
     'users',
     'events',
 ]
+)
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -52,6 +56,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware", # To load css
 ]
 
 ROOT_URLCONF = 'habit_tracker.urls'
@@ -59,7 +65,7 @@ ROOT_URLCONF = 'habit_tracker.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templatesbase'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -127,7 +133,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = "static/"
+
+STATICFILES_DIRS = [
+    # Add the path to your static files here.
+    # For example, 'path/to/your/project/static',
+    'static'
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
