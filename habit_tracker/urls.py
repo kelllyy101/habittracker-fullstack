@@ -15,17 +15,26 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from habit import views
+from habit import views as habit_views
+from events import views as events_views
+from users import views as users_views
+from django.conf.urls.static import static
+from django.conf import settings
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.get_habits, name = 'get_habits'),
-    path('add', views.add_habit, name = 'add'),
-    path('edit/<item_id>', views.edit_habit, name='edit'),
-    path('toggle/<item_id>', views.toggle_habit, name='toggle'),
-    path('delete/<item_id>', views.delete_habit, name='delete'),
-    # path('members/', include('django.contrib.auth.urls')),
-    # path('members/', include('users.urls')),
-] # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
+    path('admin/', admin.site.urls, name="admin"),
+    # path('', events_views.home, name="home"),
+    # path('events/', include('events.urls')),
+    path('', events_views.landing, name = ''),
+    path('app', habit_views.get_habits, name = 'get_habits'),
+    path('add', habit_views.add_habit, name = 'add'),
+    path('edit/<item_id>', habit_views.edit_habit, name='edit'),
+    path('tick', habit_views.tick_habit, name='tick'),
+    path('delete/<item_id>', habit_views.delete_habit, name='delete'),
+    # path('', include('django.contrib.auth.urls')),
+    path('', include('users.urls')),
+]
+#+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])

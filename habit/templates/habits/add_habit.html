@@ -1,27 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habits</title>
-</head>
-<body>
-<h1>Add a New Habit
-</h1>
-<form method="POST" action="add">
-    {% csrf_token %}
-    {{ form.as_p }}
-    </div>
-    <div>
-        <p>
-            <button type="submit">Add Habit</button>
-        </p>
-    </div>
-</form>
+{% extends 'base_template.html' %}
+{% load static %}
+{% block content %}
 
-
-
-
-
-</body>
-</html>
+<main class="d-flex flex-column align-items-center justify-content-center">
+    <h1> text-dark px-4>Add a New Habit
+    </h1>
+    <form class="bg-light align-items-center form-control" action="add" method="POST" autofocus>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="d-flex justify-content-center text-center w-100 my-4">
+            <p>
+                <button type="submit" class="btn btn-outline-primary btn-lg">Add Habit</button>
+            </p>
+        </div>
+    </form>
+</main>
+{% endblock %}

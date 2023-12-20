@@ -40,13 +40,13 @@ class TestViews(TestCase):
         self.assertEqual(len(existing_items), 0)
 
 
-    def test_can_toggle_habit(self):
-        # Test to toggle habit
-        item = Item.objects.create(name='Test Habit', done=True)
-        response = self.client.get(f'/toggle/{item.id}')
-        self.assertRedirects(response, '/')
-        updated_item = Item.objects.get(id=item.id)
-        self.assertFalse(updated_item.done)
+    # def test_can_toggle_habit(self):
+    #     # Test to toggle habit
+    #     item = Item.objects.create(name='Test Habit', done=True)
+    #     response = self.client.get(f'/toggle/{item.id}')
+    #     self.assertRedirects(response, '/')
+    #     updated_item = Item.objects.get(id=item.id)
+    #     self.assertFalse(updated_item.done)
 
 
     def test_can_edit_habit_redirect(self):
