@@ -31,6 +31,7 @@ urlpatterns = [
     path('add', habit_views.add_habit, name = 'add'),
     path('edit/<item_id>', habit_views.edit_habit, name='edit'),
     path('tick', habit_views.tick_habit, name='tick'),
+    path('clear', habit_views.clear, name='clear'),
     path('delete/<item_id>', habit_views.delete_habit, name='delete'),
     # path('', include('django.contrib.auth.urls')),
     path('', include('users.urls')),

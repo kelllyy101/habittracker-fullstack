@@ -20,12 +20,12 @@ def home(request):
 
 @login_required
 def get_habits(request):     
-    request.user.id
     items = Item.objects.filter(user_id=request.user.id).order_by('id')
     context = {
         'items': items
     }
     return render(request, 'habits/habits.html', context)
+
 
 @login_required
 def add_habit(request):
@@ -43,6 +43,7 @@ def add_habit(request):
         'form': form
     }
     return render(request, 'habits/add_habit.html', context)
+
 
 @login_required
 def edit_habit(request, item_id):
@@ -82,4 +83,16 @@ def tick_habit(request):
         setattr(item, dof, not dof_value)
         item.save(update_fields=[dof]) 
  
+        return HttpResponse('')
+
+
+@login_required
+def clear(request):
+    items = Item.objects.filter(user_id=request.user.id)
+    dofs = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+    for item in items:
+        for dof in dofs:
+            setattr(item, dof, False)
+        item.save() 
+
         return HttpResponse()

@@ -14,7 +14,6 @@
               <li><a class="dropdown-item" href="#">Add Habit</a></li>
               <li><a class="dropdown-item" href="{% url 'get_habits' %}">My Habits</a></li>
               {% endif %}
-              <li><a class="dropdown-item" href="#">Search Habits</a></li>
             </ul>
           </li>
   
@@ -53,8 +52,6 @@
         <form class="d-flex" method=POST action="">
           {% csrf_token %}
   
-          <input class="form-control me-2" type="search" placeholder="Search Habits" aria-label="Search" name="searched">
-          <button class="btn btn-outline-primary" type="submit">Search</button>
         </form>
       </div>
     </div>
