@@ -5,10 +5,9 @@
 <h1>Login</h1>
 
 
-<form action="" method=POST>
+<form action="" method=POST class="my-5">
   {% csrf_token %}
-  <form>
-    <div class="mb-3">
+    <div class="mb-3 d-flex flex-column">
       <label for="exampleInputEmail1" class="form-label autofocus">Username</label>
       <input type="text" class="form-control" name="username" aria-describedby="emailHelp">
     </div>
@@ -16,7 +15,7 @@
       <label for="exampleInputPassword1" class="form-label">Password</label>
       <input type="password" class="form-control" name="password">
     </div>
-    <input type="submit" value="Submit" class="btn btn-primary">
+    <input type="submit" value="Submit" class="btn btn-primary py-3">
   </form>
 
   {% endblock %}
