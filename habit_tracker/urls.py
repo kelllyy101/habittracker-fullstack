@@ -24,8 +24,6 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls, name="admin"),
-    # path('', events_views.home, name="home"),
-    # path('events/', include('events.urls')),
     path('', events_views.landing, name = ''),
     path('app', habit_views.get_habits, name = 'get_habits'),
     path('add', habit_views.add_habit, name = 'add'),
@@ -33,9 +31,5 @@ urlpatterns = [
     path('tick', habit_views.tick_habit, name='tick'),
     path('clear', habit_views.clear, name='clear'),
     path('delete/<item_id>', habit_views.delete_habit, name='delete'),
-    # path('', include('django.contrib.auth.urls')),
     path('', include('users.urls')),
 ]
-#+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-# if settings.DEBUG:
-#     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])

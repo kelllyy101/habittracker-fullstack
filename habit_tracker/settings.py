@@ -88,13 +88,6 @@ WSGI_APPLICATION = 'habit_tracker.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-#DATABASES = {
- #   'default': {
-  #      'ENGINE': 'django.db.backends.sqlite3',
-   #     'NAME': BASE_DIR / 'db.sqlite3',
-    #}
-#}
-
 DATABASES = {
    'default': dj_database_url.parse('postgres://innxzhzl:QpTWHu7Ahv3UhRooKkYAD5TD6sQRpn6m@flora.db.elephantsql.com/innxzhzl')
 }
@@ -136,16 +129,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
-
-
 STATIC_URL = "static/"
 
-# STATICFILES_DIRS = [
-#     # Add the path to your static files here.
-#     # For example, 'path/to/your/project/static',
-#     'static'
-# ]
+STATICFILES_DIRS = [
+    # Add the path to your static files here.
+    # For example, 'path/to/your/project/static',
+    'staticfiles'
+]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
