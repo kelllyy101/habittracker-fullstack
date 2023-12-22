@@ -1,6 +1,6 @@
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
-- [Introduction](#introduction)
+- [Introduction and Features](#introduction-and-features)
 - [User Experience Design (UX)](#user-experience-design-ux)
     + [Typography](#typography)
     + [Wireframes](#wireframes)
@@ -34,52 +34,52 @@
 
 Welcome to the Habit Tracker app, a powerful tool designed to help users build and maintain healthy habits. This application is built using Django, offering a user-friendly interface to track and manage your daily routines.
 
-## Overview
+## Introduction
 
 The Habit Tracker app serves as a personalised habit management system, allowing users to register, track their habits, and leverage essential features to enhance their daily routines.
 
 ## Features
 
-### User Registration and Submission
+#### User Registration and Submission
 
 - **User Registration:** Sign up to create an account and start utilising the habit tracking features.
 
-### Interaction and Organization
+#### Interaction and Organization
 
 - **Agile Principles:** Built with Agile management principles, ensuring flexibility and responsiveness to user needs.
 
-### Project Management
+#### Project Management
 
 - **GitHub Integration:** Leveraging GitHub features such as Issues and Projects to implement Agile methodology.
 - **Heroku:** Deployed this app using Heroku.
 - **Closed Issues:** Detailed records of resolved issues, showcasing the dedication to maintaining a bug-free application.
 
-### CRUD Functionality
+#### CRUD Functionality
 
 - **Resource Management:** Users can create, update, and delete habits they have created, ensuring content relevance.
 - **Account Management:** Users have full control over their accounts, with the ability to create, update, read, and delete habits.
 - **Admin Privileges:** Admins can manage all resources efficiently, ensuring the integrity of the habit directory.
 
-### Project Planning and Execution
+#### Project Planning and Execution
 
 - **GitHub Tags:** Efficient use of tags for assigning story points, prioritizing features based on categorising user stories.
 - **Milestones:** Strategically plan sprints and set deadlines using GitHub's Milestones feature.
 
-## Learning and Development
+#### Learning and Development
 
 - **Continuous Improvement:** Regular updates and bug fixes based on user feedback and reported issues that I found during manual testing.
 - **Educational Background:** Drawing insights from the Agile Foundations course on Code Institute, while learning to enhance project management skills and understanding of Agile methodologies.
 
 Feel free to explore the Habit Tracker app, track your habits effortlessly, and contribute to the growth of a supportive community. Happy habit building!
 
-## User Experience
+#### User Experience
 As the project is a directory of design resources, I wanted to try something fun and bold with the design and was inspired by the trend for neubrutalism web design, and websites such as
 
 #### Typography and Colour
 A basic font was used for the whole habit tracker as it fitted the simplistic theme of the site and helps with readability. Three basic colours, blue, black and white also contribute to the simplicity of this website so the focus is on the habits and the user achieving their goals.
 
 
-#### Wireframe
+## Wireframe
 
 These wireframes were created with Balsamiq Wireframes.
 ![Alt text](/static/readme_images/Screenshot%20(774).png>)
@@ -90,7 +90,7 @@ Habit Tracker Django App Database Flow Diagram
 
 ## Models:
 
-### 1. `Item` Model
+#### 1. `Item` Model
    - **Fields:**
      - `name`: CharField
      - `monday` to `sunday`: BooleanFields
@@ -98,7 +98,7 @@ Habit Tracker Django App Database Flow Diagram
      - `__str__`: Returns the name of the habit
    - **Description:** Represents a habit item with details such as name, completion status, and days of the week.
 
-### 2. `HabitUsers` Model
+#### 2. `HabitUsers` Model
    - **Fields:**
      - `first_name`: CharField
      - `last_name`: CharField
@@ -110,52 +110,52 @@ Habit Tracker Django App Database Flow Diagram
 
 ## Views:
 
-### 1. `home` Function
+#### 1. `home` Function
    - **Input:** None
    - **Output:** HTML page (`home.html`)
    - **Description:** Renders the home page for the application.
 
-### 2. `get_habits` Function
+#### 2. `get_habits` Function
    - **Input:** User session data
    - **Output:** HTML page (`habits.html`) with a list of habits
    - **Description:** Retrieves and displays a list of habits for the authenticated user.
 
-### 3. `add_habit` Function
+#### 3. `add_habit` Function
    - **Input:** Habit data from a form
    - **Output:** Redirect to `get_habits` view
    - **Description:** Adds a new habit to the database.
 
-### 4. `edit_habit` Function
+#### 4. `edit_habit` Function
    - **Input:** Habit data from a form
    - **Output:** Redirect to `get_habits` view
    - **Description:** Edits an existing habit in the database.
 
-### 6. `delete_habit` Function
+#### 6. `delete_habit` Function
    - **Input:** Habit ID
    - **Output:** Redirect to `get_habits` view
    - **Description:** Deletes a habit from the database.
 
-### 7. `admin_view` Function
+#### 7. `admin_view` Function
    - **Input:** None
    - **Output:** Redirect to the admin panel (`admin/`)
    - **Description:** Redirects the user to the Django admin panel.
 
-### 8. `landing` Function
+#### 8. `landing` Function
    - **Input:** None
    - **Output:** HTML page (`landing.html`)
    - **Description:** Renders the landing page for the application.
 
-### 9. `register_user` Function
+#### 9. `register_user` Function
    - **Input:** User registration data from a form
    - **Output:** Redirect to `login` view
    - **Description:** Handles user registration and authentication.
 
-### 10. `login_user` Function
+#### 10. `login_user` Function
    - **Input:** User login credentials
    - **Output:** Redirect to `get_habits` view or `login` view with an error message
    - **Description:** Handles user login and redirects accordingly.
 
-### 11. `logout_user` Function
+#### 11. `logout_user` Function
    - **Input:** None
    - **Output:** Redirect to `login` view
    - **Description:** Logs out the user and redirects to the login page.
