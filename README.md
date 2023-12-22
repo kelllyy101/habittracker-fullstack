@@ -258,11 +258,14 @@ I manually tested the features by registering and logging in, then I set my own 
 
 ## Code Validation
 #### HTML Validation
-
+All Html codes was run through validators, warnings regarding the Django URL formatting.
 #### CSS Validation
+I ran the CSS through Jigsaw WC3 validator.
+
 #### Python Validation
 I ran my code through a PEP8 linter to ensure it adhered to Python's style guidelines. I corrected any formatting issues or violations reported by the linter.
 #### JavaScript
+I ran my code through JSLint and returns no errors.
 
 
 
