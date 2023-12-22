@@ -231,6 +231,16 @@ Habit Tracker Django App Database Flow Diagram
 
 
 ## Technologies
+- [favicon.io](https://favicon.io/favicon-generator/) to make a favicon for site.
+- [Balsamiq](https://balsamiq.com/wireframes/) for wireframing.
+- [Bootstrap 5](https://getbootstrap.com/) as a front end framework.
+- [Python](https://www.python.org/)
+- [pip](https://pip.pypa.io/en/stable/) for installing Python packages.
+- [Git](https://git-scm.com/) for version control.
+- [GitHub](https://github.com/) for storing the repository online during development.
+- [CodeAnywhere](https://id.codeanywhere.com/) as a cloud based IDE.
+- [Google Chrome](https://www.google.com/intl/en_ie/chrome/),
+- [Microsoft Edge](https://www.microsoft.com/en-us/edge) for testing on Windows 11.
 
 
 ## Testing
