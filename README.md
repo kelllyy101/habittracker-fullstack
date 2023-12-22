@@ -227,7 +227,47 @@ Habit Tracker Django App Database Flow Diagram
 12. Customize Habit Reminders  
     As a user, I want to customize the time and frequency of habit reminders, ensuring that I receive prompts at times that suit my routine.
 
+## Challenges Faced
 
+1. Django Settings Configuration:
+Issue: Encountered ImproperlyConfigured error with the message "Requested setting INSTALLED_APPS, but settings are not configured."
+Resolution: Needed to manually configure Django settings using settings.configure() in a standalone script or test file.
+
+2. Gunicorn Worker Boot Failure:
+Issue: Faced gunicorn.errors.HaltServer with the message "Worker failed to boot."
+Resolution: Investigated Gunicorn error logs, reviewed application code, checked dependencies, adjusted Gunicorn configuration, ran Gunicorn in debug mode, checked file permissions, and ensured sufficient system resources.
+
+3. Django Template Tag Issue:
+Error: Bad value {% static 'css/style.css' %} for attribute href on element link.
+Possible Cause: The {% static %} template tag is not being recognized.
+Resolution: Ensure that Django is installed and properly configured. Check if the template is being processed by Django, and the {% static %} tag is being recognized.
+
+4. ModuleNotFoundError: No module named 'mysite':
+This error indicated a problem with the Django project structure or the Python path.
+The solution involved checking the project structure, activating the virtual environment, and ensuring the correct directory is in the Python path.
+Gunicorn Debug Logs:
+
+5. While Gunicorn started successfully, there were no specific errors related to the Django application's functionality in the provided logs.
+Debugging involved checking Django application logs, ensuring proper configuration for static files, verifying database connections, and confirming environment variable settings.
+Debug Mode and Security:
+
+6. Considerations included turning off debug mode in production to enhance security and prevent the exposure of sensitive information.
+Security measures, such as configuring Gunicorn behind a reverse proxy and enabling HTTPS, were recommended.
+
+7. Static Files Configuration:
+Attention was directed towards confirming the correct configuration for serving static files in a production environment, either through a web server like Nginx or Apache or using tools like WhiteNoise.
+
+8. Environment Variables:
+Ensuring that required environment variables were set correctly for the Django application, both in the Gunicorn command and in a separate configuration file.
+
+9.Database Connection:
+Verifying that the Django application could successfully connect to the database.
+Port Availability:
+
+10. Confirming that the specified port (8000) was available and not blocked by a firewall or used by another process.
+
+11. Ongoing Debugging:
+Suggestions were made to continue investigating potential issues by checking Django application logs or any error messages reported by the application itself.
 
 
 ## Technologies
@@ -238,7 +278,7 @@ Habit Tracker Django App Database Flow Diagram
 - [pip](https://pip.pypa.io/en/stable/) for installing Python packages.
 - [Git](https://git-scm.com/) for version control.
 - [GitHub](https://github.com/) for storing the repository online during development.
-- [CodeAnywhere](https://id.codeanywhere.com/) as a cloud based IDE.
+- [CodeAnywhere](https://htts://id.codeanywhere.com/) as a cloud based IDE.
 - [Google Chrome](https://www.google.com/intl/en_ie/chrome/),
 - [Microsoft Edge](https://www.microsoft.com/en-us/edge) for testing on Windows 11.
 
@@ -259,7 +299,45 @@ Functionality Testing with Print Statements: I inserted print statements at key 
 ![Alt text](/static/readme_images/Screenshot%20(773).png)
 
 #### Accessibility Testing
+For manual testing I completed the following:
+Keyboard Navigation:
+Navigate through your application using only the keyboard. Ensure that all interactive elements are reachable and operable without a mouse.
+Test the tab order to ensure a logical and intuitive flow.
 
+Screen Reader Testing:
+Use screen reader software (e.g., VoiceOver, JAWS, NVDA) to navigate through your application.
+Verify that all essential information is conveyed audibly.
+Ensure that ARIA roles and attributes are appropriately used to enhance the experience for screen reader users.
+
+Color Contrast:
+Check color combinations for sufficient contrast. There are online tools available to check color contrast ratios against Web Content Accessibility Guidelines (WCAG) standards.
+Ensure that text is readable when viewed in grayscale.
+
+Semantic HTML:
+Verify that HTML elements are semantically structured. Use appropriate tags (e.g., <nav>, <header>, <footer>) to enhance the document structure.
+Ensure headings (<h1>, <h2>, etc.) are used logically and in the correct order.
+
+Form Accessibility:
+Check that form elements have appropriate labels.
+Test form validation and error messages. Ensure they are announced by screen readers.
+
+Images and Alt Text:
+Verify that all images have descriptive alternative text (alt text).
+Test images by disabling them and ensuring content remains understandable.
+
+Focus Styles:
+Check that focus styles are visible and sufficient for all interactive elements.
+Ensure that focus is not trapped in a specific area and can be easily moved.
+
+Browser Zoom:
+Test your application at different zoom levels to ensure content remains usable and readable.
+
+Responsive Design:
+Check that your application is responsive and works well on various devices and screen sizes.
+Test with different browsers to ensure cross-browser compatibility.
+
+Testing with Real Users:
+Conduct usability testing with individuals providing valuable insights into the actual user experience.
 
 #### User Story Testing
 I manually tested the features by registering and logging in, then I set my own habits. I picked the days I wanted to do these habits and I edited habits that I wanted to change and I deleted habits that I did not want to keep. I then logged out. I returned to the login in page after a while and my username was there with the password saved so I was able to log back in and I could see the habits I had set and the days I want to do them.
