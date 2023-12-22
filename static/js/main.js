@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 checkboxes = document.querySelectorAll('input[type="checkbox"]');
 checkboxes.forEach((checkbox) => {
   checkbox.addEventListener("change", (e) => {
@@ -28,7 +29,7 @@ function getCookie(name) {
   const value = `; ${document.cookie}`;
   const parts = value.split(`; ${name}=`);
   if (parts.length === 2) return parts.pop().split(';').shift();
-};
+}
 
 
 document.getElementById("clear").onclick = function () {
