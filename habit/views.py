@@ -34,9 +34,12 @@ def add_habit(request):
         if form.is_valid():
             habit = form.save(commit=False)
             setattr(habit, "user_id", request.user.id)
-
+            messages.success(request, 'Added Habit Successfully!')
+            
+        else:
+            messages.error(request, 'Failed to add habit. Please ensure the habit is valid.')
             habit.save()
-            return redirect('get_habits')
+        return redirect('get_habits')
 
     form = ItemForm()
     context = {
@@ -51,6 +54,7 @@ def edit_habit(request, item_id):
     if request.method == 'POST':
         form  = ItemForm(request.POST, instance=item)
         if form.is_valid():
+            messages.success(request, 'Habit Successfully Edited!')
             form.save()
             return redirect('get_habits')
     form = ItemForm(instance=item)
@@ -64,6 +68,7 @@ def edit_habit(request, item_id):
 def delete_habit(request, item_id):
     item = get_object_or_404(Item, id=item_id)
     item.delete()
+    messages.success(request, 'Habit Successfully Deleted!')
     return redirect('get_habits')
 
 
@@ -93,6 +98,7 @@ def clear(request):
     for item in items:
         for dof in dofs:
             setattr(item, dof, False)
-        item.save() 
+            messages.success(request, 'Habits Successfully Cleared but Please Refresh the Page!')
+        item.save()
 
         return HttpResponse()
