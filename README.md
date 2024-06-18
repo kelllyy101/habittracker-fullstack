@@ -1,16 +1,15 @@
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
 - [Introduction and Features](#introduction-and-features)
-- [User Experience Design (UX)](#user-experience-design-ux)
-    + [Typography](#typography)
-    + [Wireframes](#wireframes)
-- [Accessibility]('accessibility)
-- [User Stories](#user-stories)
+- [User Experience Design (UX)](#user-experience)
+    + [Typography](#typography-and-colour)
+    + [Wireframes](#wireframe)
+- [Models](#Models)
+- [User Stories](#User-stories)
   - [Future Features](#future-features)
+  - [Challenges Faced](#challenges-faced)
 - [Technologies](#technologies)
 -* [Testing](#testing)
-    + [Browser Compatibility](#browser-compatibility)
-    + [Responsiveness](#responsiveness)
     + [Performance Testing](#performance-testing)
     + [Accessibility Testing](#accessibility-testing)
     + [User Story Testing](#user-story-testing)
@@ -23,8 +22,6 @@
   - [Deployment](#deployment)
     + [Local Deployment](#local-deployment)
     + [Heroku Deployment](#heroku-deployment)
-  - [Project Creation](#project-creation)
-  - [Software](#software)
   - [Media and Credits](#media-and-credits)
 - [Thanks to](#thanks-to)
 
@@ -34,46 +31,44 @@
 
 Welcome to the Habit Tracker app, a powerful tool designed to help users build and maintain healthy habits. This application is built using Django, offering a user-friendly interface to track and manage your daily routines.
 
-## Introduction
+## Introduction and features
 
 The Habit Tracker app serves as a personalised habit management system, allowing users to register, track their habits, and leverage essential features to enhance their daily routines.
 
-## Features
-
-#### User Registration and Submission
+### User Registration and Submission
 
 - **User Registration:** Sign up to create an account and start utilising the habit tracking features.
 
-#### Interaction and Organization
+### Interaction and Organization
 
 - **Agile Principles:** Built with Agile management principles, ensuring flexibility and responsiveness to user needs.
 
-#### Project Management
+### Project Management
 
 - **GitHub Integration:** Leveraging GitHub features such as Issues and Projects to implement Agile methodology.
 - **Heroku:** Deployed this app using Heroku.
 - **Closed Issues:** Detailed records of resolved issues, showcasing the dedication to maintaining a bug-free application.
 
-#### CRUD Functionality
+### CRUD Functionality
 
 - **Resource Management:** Users can create, update, and delete habits they have created, ensuring content relevance.
 - **Account Management:** Users have full control over their accounts, with the ability to create, update, read, and delete habits.
 - **Admin Privileges:** Admins can manage all resources efficiently, ensuring the integrity of the habit directory.
 
-#### Project Planning and Execution
+### Project Planning and Execution
 
 - **GitHub Tags:** Efficient use of tags for assigning story points, prioritizing features based on categorising user stories.
 - **Milestones:** Strategically plan sprints and set deadlines using GitHub's Milestones feature.
 
-#### Learning and Development
+### Learning and Development
 
 - **Continuous Improvement:** Regular updates and bug fixes based on user feedback and reported issues that I found during manual testing.
 - **Educational Background:** Drawing insights from the Agile Foundations course on Code Institute, while learning to enhance project management skills and understanding of Agile methodologies.
 
 Feel free to explore the Habit Tracker app, track your habits effortlessly, and contribute to the growth of a supportive community. Happy habit building!
 
-#### User Experience
-As the project is a directory of design resources, I wanted to try something fun and bold with the design and was inspired by the trend for neubrutalism web design, and websites such as
+### User Experience
+As the project is a directory of design resources, I wanted to try something fun and bold with the design and was inspired by the trend for neubrutalism web design, and websites with minimalistic design so users can focus on achieving their habits.
 
 #### Typography and Colour
 A basic font 'Anton', with a fallback on Sans Serif, was used for the whole habit tracker as it fitted the simplistic theme of the site and helps with readability. Three basic colours, blue, black and white also contribute to the simplicity of this website so the focus is on the habits and the user achieving their goals.
@@ -85,8 +80,6 @@ These wireframes were created with Balsamiq Wireframes.
 ![Alt text](/staticfiles/readme_images/Screenshot(775).png)
 ![Alt text](/staticfiles/readme_images/Screenshot(774).png)
 
-## Title:
-Habit Tracker Django App Database Flow Diagram
 
 ## Models:
 
@@ -161,7 +154,7 @@ Habit Tracker Django App Database Flow Diagram
    - **Description:** Logs out the user and redirects to the login page.
 
 
-## User-stories
+## User stories
 1. Create User Account  
     As a new user, I want to create a personalised account by providing my email and a secure password, so I can start tracking my habits.
 
@@ -190,7 +183,7 @@ Habit Tracker Django App Database Flow Diagram
     As a user, I want the habit tracker application to be responsive on mobile devices, ensuring that I can conveniently track habits on the go.
 
 
-#### Future Features
+### Future Features
 1. Reset Forgotten Password  
    As a user who forgets my password, I want the option to reset it by receiving a password reset link via email, ensuring I can regain access to my account.
 
@@ -227,7 +220,7 @@ Habit Tracker Django App Database Flow Diagram
 12. Customize Habit Reminders  
     As a user, I want to customize the time and frequency of habit reminders, ensuring that I receive prompts at times that suit my routine.
 
-## Challenges Faced
+### Challenges Faced
 
 1. Django Settings Configuration:
 Issue: Encountered ImproperlyConfigured error with the message "Requested setting INSTALLED_APPS, but settings are not configured."
@@ -285,11 +278,8 @@ Suggestions were made to continue investigating potential issues by checking Dja
 
 ## Testing
 
-#### Browser-Compatibility
 
-#### Responsiveness
-
-#### Performance Testing
+### Performance Testing
 Each function has their own test to ensure smooth funtionality and app usage. I ran a debug just before deploying as well as incuding error messages through out the functions created to test for functionality.
 
 Code Structure and Style Testing (PEP8): I ran my code through a PEP8 linter to ensure it adhered to Python's style guidelines. I corrected any formatting issues or violations reported by the linter.
@@ -298,7 +288,7 @@ Functionality Testing with Print Statements: I inserted print statements at key 
 ![Alt text](/static/readme_images/Screenshot%20(780).png)
 ![Alt text](/static/readme_images/Screenshot%20(773).png)
 
-#### Accessibility Testing
+### Accessibility Testing
 For manual testing I completed the following:
 Keyboard Navigation:
 Navigate through your application using only the keyboard. Ensure that all interactive elements are reachable and operable without a mouse.
@@ -339,25 +329,27 @@ Test with different browsers to ensure cross-browser compatibility.
 Testing with Real Users:
 Conduct usability testing with individuals providing valuable insights into the actual user experience.
 
-#### User Story Testing
+### User Story Testing
 I manually tested the features by registering and logging in, then I set my own habits. I picked the days I wanted to do these habits and I edited habits that I wanted to change and I deleted habits that I did not want to keep. I then logged out. I returned to the login in page after a while and my username was there with the password saved so I was able to log back in and I could see the habits I had set and the days I want to do them.
 ![Alt text](/static/readme_images/Screenshot%20(792).png)
 
 
 ## Code Validation
-#### HTML Validation
+### HTML Validation
 All Html codes was run through validators, warnings regarding the Django URL formatting.
-#### CSS Validation
+### CSS Validation
 I ran the CSS through Jigsaw WC3 validator.
 
-#### Python Validation
+### Python Validation
 I ran my code through a PEP8 linter to ensure it adhered to Python's style guidelines. I corrected any formatting issues or violations reported by the linter.
-#### JavaScript
+### JavaScript
 I ran my code through JSLint and returns no errors.
 
 
 
 # Deployment
+
+### Heroku Deployment
 Heroku is a platform that allows you to deploy and host your applications, which is what I used for this expense tracker and these are the following steps I took:
 
 I logged in to my Heroku account at https://www.heroku.com/.
@@ -377,8 +369,46 @@ else:
 
 I deployed my project to Heroku by pushing your Git repository to Heroku's remote, that will update with every git push, as chosen by me in the settings, successfully integrating and deploying my project for use through the Heroku URL.
 
+### Local Deployment
+Got it, I'll format the environment variables as inline code snippets for your README.
 
-## Media-and-credits
+### Local Deployment
+
+To deploy the Habit Tracker app locally, follow these steps:
+
+1. **Clone the Repository:**
+   `git clone https://github.com/your-username/your-repo-name.git` and `cd your-repo-name`
+
+2. **Create and Activate a Virtual Environment:**
+   `python3 -m venv venv` and `source venv/bin/activate` (On Windows use `venv\Scripts\activate`).
+
+3. **Install Dependencies:**
+   `pip install -r requirements.txt`
+
+4. **Set Up Environment Variables:**
+   Create a `.env` file in the root of your project directory and add the following:
+
+   `DEBUG=True`  
+   `SECRET_KEY=your_secret_key`  
+   `ALLOWED_HOSTS=localhost,127.0.0.1`. The hosts are examples from my own project, these may differ,
+
+5. **Apply Migrations:**
+   `python manage.py migrate`
+
+6. **Create a Superuser:**
+   `python manage.py createsuperuser`
+
+7. **Run the Development Server:**
+   `python manage.py runserver`
+
+8. **Access the Application:**
+   Open your web browser and navigate to `http://localhost:8000` to access the application. Use `http://localhost:8000/admin` to access the admin interface. 
+   
+   Your local host may also use/have a different port. I also used a website like [Go_Live](https://snapcraft.io/go-live), a CLI used for local development.
+
+By following these steps, you will be able to deploy and run the Habit Tracker app on your local machine successfully.
+
+## Media and credits
 Bootstrap was used extensively in the project.
 Code Institute's To-Do list walk through project was a big help setting the base of this project and to be able to understand the basics.
 Habit Tracker websites such as Habify and MyHabitTracker influenced the design.
@@ -387,5 +417,5 @@ Stack Overflow provided much needed documentation when deploying this project.
 Official Django Documentation was all thoroughly used throughout.
 
 
-## Thanks-to
+## Thanks to
 I would like to express my gratitude to Code Institute for their exceptional web development curriculum and to my mentor for their invaluable guidance and support throughout this project. Thank you for providing the resources and expertise that have helped me grow as a developer.
