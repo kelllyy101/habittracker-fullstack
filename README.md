@@ -77,8 +77,8 @@ A basic font 'Anton', with a fallback on Sans Serif, was used for the whole habi
 ## Wireframe
 
 These wireframes were created with Balsamiq Wireframes.
-![Alt text](/staticfiles/readme_images/Screenshot(775).png)
-![Alt text](/staticfiles/readme_images/Screenshot(774).png)
+![Habit view for user](/staticfiles/readme_images/Screenshot%20(775).png)
+![Landing page](/staticfiles/readme_images/Screenshot%20(774).png)
 
 
 ## Models:
@@ -285,8 +285,8 @@ Each function has their own test to ensure smooth funtionality and app usage. I 
 Code Structure and Style Testing (PEP8): I ran my code through a PEP8 linter to ensure it adhered to Python's style guidelines. I corrected any formatting issues or violations reported by the linter.
 
 Functionality Testing with Print Statements: I inserted print statements at key points in my code to confirm the execution flow. For example, I added print statements at the beginning of each function to ensure they were being called. I ran the app and verified that the print statements showed up at the expected points
-![Alt text](/static/readme_images/Screenshot%20(780).png)
-![Alt text](/static/readme_images/Screenshot%20(773).png)
+![Print statements to show points of execution](/staticfiles/readme_images/Screenshot%20(780).png)
+![Testing](/staticfiles/readme_images/Screenshot%20(773).png)
 
 ### Accessibility Testing
 For manual testing I completed the following:
@@ -304,8 +304,8 @@ Check color combinations for sufficient contrast. There are online tools availab
 Ensure that text is readable when viewed in grayscale.
 
 Semantic HTML:
-Verify that HTML elements are semantically structured. Use appropriate tags (e.g., <nav>, <header>, <footer>) to enhance the document structure.
-Ensure headings (<h1>, <h2>, etc.) are used logically and in the correct order.
+Verify that HTML elements are semantically structured. Use appropriate tags (e.g.` <nav>`, `<header>`, `<footer>`) to enhance the document structure.
+Ensure headings (`<h1>`, `<h2>`, etc.) are used logically and in the correct order.
 
 Form Accessibility:
 Check that form elements have appropriate labels.
@@ -331,7 +331,7 @@ Conduct usability testing with individuals providing valuable insights into the 
 
 ### User Story Testing
 I manually tested the features by registering and logging in, then I set my own habits. I picked the days I wanted to do these habits and I edited habits that I wanted to change and I deleted habits that I did not want to keep. I then logged out. I returned to the login in page after a while and my username was there with the password saved so I was able to log back in and I could see the habits I had set and the days I want to do them.
-![Alt text](/static/readme_images/Screenshot%20(792).png)
+![Image of Habit Tracker](/staticfiles/readme_images/Screenshot%20(792).png)
 
 
 ## Code Validation
