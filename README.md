@@ -76,7 +76,7 @@ Feel free to explore the Habit Tracker app, track your habits effortlessly, and 
 As the project is a directory of design resources, I wanted to try something fun and bold with the design and was inspired by the trend for neubrutalism web design, and websites such as
 
 #### Typography and Colour
-A basic font was used for the whole habit tracker as it fitted the simplistic theme of the site and helps with readability. Three basic colours, blue, black and white also contribute to the simplicity of this website so the focus is on the habits and the user achieving their goals.
+A basic font 'Anton', with a fallback on Sans Serif, was used for the whole habit tracker as it fitted the simplistic theme of the site and helps with readability. Three basic colours, blue, black and white also contribute to the simplicity of this website so the focus is on the habits and the user achieving their goals.
 
 
 ## Wireframe
