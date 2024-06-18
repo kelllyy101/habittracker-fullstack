@@ -82,8 +82,8 @@ A basic font was used for the whole habit tracker as it fitted the simplistic th
 ## Wireframe
 
 These wireframes were created with Balsamiq Wireframes.
-![Alt text](/static/readme_images/Screenshot%20(774).png>)
-![Alt text](</static/readme_images/Screenshot (775).png>)
+![Alt text](staticfiles/readme_images/Screenshot (775).png)
+![Alt text](staticfiles/readme_images/Screenshot (774).png)
 
 ## Title:
 Habit Tracker Django App Database Flow Diagram
