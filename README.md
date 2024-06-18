@@ -82,8 +82,8 @@ A basic font 'Anton', with a fallback on Sans Serif, was used for the whole habi
 ## Wireframe
 
 These wireframes were created with Balsamiq Wireframes.
-![Alt text](staticfiles/readme_images/Screenshot (775).png)
-![Alt text](staticfiles/readme_images/Screenshot (774).png)
+![Alt text](/staticfiles/readme_images/Screenshot(775).png)
+![Alt text](/staticfiles/readme_images/Screenshot(774).png)
 
 ## Title:
 Habit Tracker Django App Database Flow Diagram
