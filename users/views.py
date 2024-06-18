@@ -7,6 +7,11 @@ from .forms import RegisterUserForm
 
 
 def register_user(request):
+    if request.user.is_authenticated:
+        # If the user is logged in, redirect them to the home page or another appropriate page
+        messages.info(request, ("You are already logged in."))
+        return redirect('get_habits')
+    
     if request.method == "POST":
         form = RegisterUserForm(request.POST)
         if form.is_valid():
@@ -16,7 +21,7 @@ def register_user(request):
             user = authenticate(username=username, password=password)
             login(request, user)
             messages.success(request, ("Registration Successful!"))
-            return redirect('login')
+            return redirect('get_habits')
     else:
         form = RegisterUserForm()
 
