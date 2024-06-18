@@ -369,8 +369,6 @@ else:
 
 I deployed my project to Heroku by pushing your Git repository to Heroku's remote, that will update with every git push, as chosen by me in the settings, successfully integrating and deploying my project for use through the Heroku URL.
 
-### Local Deployment
-Got it, I'll format the environment variables as inline code snippets for your README.
 
 ### Local Deployment
 
