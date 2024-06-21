@@ -35,10 +35,10 @@ def add_habit(request):
             habit = form.save(commit=False)
             setattr(habit, "user_id", request.user.id)
             messages.success(request, 'Added Habit Successfully!')
+            habit.save()
             
         else:
             messages.error(request, 'Failed to add habit. Please ensure the habit is valid.')
-            habit.save()
         return redirect('get_habits')
 
     form = ItemForm()
