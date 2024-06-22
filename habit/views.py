@@ -98,7 +98,11 @@ def clear(request):
     for item in items:
         for dof in dofs:
             setattr(item, dof, False)
-            messages.success(request, 'Habits Successfully Cleared but Please Refresh the Page!')
         item.save()
 
-        return HttpResponse()
+    messages.success(request, 'Habits Successfully Cleared!')
+
+    context = {
+        'items': items
+    }
+    return render(request, 'habits/habits.html', context)
