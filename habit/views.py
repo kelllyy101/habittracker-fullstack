@@ -91,18 +91,14 @@ def tick_habit(request):
         return HttpResponse('')
 
 
-@login_required
-def clear(request):
-    items = Item.objects.filter(user_id=request.user.id)
-    dofs = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
-    for item in items:
-        for dof in dofs:
-            setattr(item, dof, False)
-        item.save()
+# @login_required
+# def clear(request):
+#     items = Item.objects.filter(user_id=request.user.id)
+#     dofs = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+#     for item in items:
+#         for dof in dofs:
+#             setattr(item, dof, False)
+#         item.save(update_items=['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'])
 
-    messages.success(request, 'Habits Successfully Cleared!')
-
-    context = {
-        'items': items
-    }
-    return render(request, 'habits/habits.html', context)
+#     messages.success(request, 'Habits Successfully Cleared!')
+#     return HttpResponse('')
