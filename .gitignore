@@ -8,4 +8,3 @@ node_modules/
 .github/
 cloudinary_python.txt
 *.sqlite3
-SECRET_KEY ='django-insecure-y1!b!wucm$b)l$+r21r^mis+wai=zl+55t_hz@*xby%kj^e+5m'
